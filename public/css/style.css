@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+}
+.bruh {
+    width: 100%;
+    padding-right: 300px;
+    padding-left: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav-item {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    font-size: 1.5rem;
+}
+
+#header {
+    font-size: 2.2rem;
+    font-family: "Lexend Deca";
+    color: coral;
+    margin-top:2vh;
+}
+
+#main-header {
+    font-size:3rem;
+    color:white;
+    margin-top: 5vh;
+}
