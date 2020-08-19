@@ -25,7 +25,7 @@
           <a class="nav-link" href="/profile">Profile <span class="sr-only">(current)</span> </a>
         </li>
         <li class="nav-item">
-            <a href="/users/logout" class="nav-link">Logout</a>
+            <a href="/logout" class="nav-link">Logout</a>
         </li>
       </ul>
     </div>
@@ -58,28 +58,6 @@
               class="form-control"
               placeholder="Email"
               value="<%= typeof email != 'undefined' ? email : '' %>"
-            />
-          </div>
-          <div class="form-group">
-            <label for="email"><b>Age</b></label>
-            <input
-              type="tel"
-              id="age"
-              name="age"
-              class="form-control"
-              placeholder="Age"
-              value="<%= typeof age != 'undefined' ? age : '' %>"
-            />
-          </div>
-          <div class="form-group">
-            <label for="email"><b>City</b></label>
-            <input
-              type="text"
-              id="city"
-              name="city"
-              class="form-control"
-              placeholder="City"
-              value="<%= typeof city != 'undefined' ? city : '' %>"
             />
           </div>
           <button type="submit" class="btn btn-primary btn-block">

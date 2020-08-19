@@ -1,48 +1,27 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a style="text-decoration: none" href="/"><h1 id="header">Handy Manny</h1></a>
-  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="navbar-collapse collapse" id="navbarColor01">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link active" href="/users/login">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/users/register">Register</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<div class="row mt-5">
-    <div class="col-md-6 m-auto">
-      <div class="card card-body">
-        <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Login</h1>
-        <%- include('./partials/messages') %>
-        <form action="/users/login" method="POST">
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="form-control"
-              placeholder="Enter Email"
-            />
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              class="form-control"
-              placeholder="Enter Password"
-            />
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Login</button>
-        </form>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/login.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Deca">
+    <title>Handy Manny - Login</title>
+</head>
+<body>
+    <img class="side-img" src="https://cdn.discordapp.com/attachments/745141823210782720/745551737020088331/unknown.png">
+    <div class="right">
+        <div class="content">
+            <h1>Sign in</h1>
+            <p>we don't share your information with anyone.</p>
+            <%- include('./partials/messages') %>
+            <form action="/login" method="POST">
+              <input placeholder="Email address" name="email" type="email" value="<%= typeof email != 'undefined' ? email : '' %>" >
+              <input type="password" placeholder="Password" name="password" value="<%= typeof password != 'undefined' ? password : '' %>">
+              <button type="submit" >Login</button>
+              <a target="_blank" style="text-decoration: none;" href="#"><p id="sp" >Forgot Password?</p></a>
+            </form>
+            <b><p id="bottom-text">Handy Manny.</p></b>
+        </div>
     </div>
-  </div>
+</body>
+</html>

@@ -1,98 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a style="text-decoration: none" href="/"><h1 id="header">Handy Manny</h1></a>
-  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="navbar-collapse collapse" id="navbarColor01">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/users/login">Login</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/users/register">Register</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<div class="row mt-5">
-    <div class="col-md-6 m-auto">
-      <div class="card card-body">
-        <h1 class="text-center mb-3">
-          <i class="fas fa-user-plus"></i> Register
-        </h1>
-        <%- include('./partials/messages') %>
-        <form action="/users/register" method="POST">
-          <div class="form-group">
-            <label for="name"><b>Name</b></label>
-            <input
-              type="name"
-              id="name"
-              name="name"
-              class="form-control"
-              placeholder="Name"
-              value="<%= typeof name != 'undefined' ? name : '' %>"
-            />
-          </div>
-          <div class="form-group">
-            <label for="email"><b>Email</b></label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="form-control"
-              placeholder="Email"
-              value="<%= typeof email != 'undefined' ? email : '' %>"
-            />
-          </div>
-          <div class="form-group">
-            <label for="email"><b>Age</b></label>
-            <input
-              type="tel"
-              id="age"
-              name="age"
-              class="form-control"
-              placeholder="Age"
-              value="<%= typeof age != 'undefined' ? age : '' %>"
-            />
-          </div>
-          <div class="form-group">
-            <label for="email"><b>City</b></label>
-            <input
-              type="text"
-              id="city"
-              name="city"
-              class="form-control"
-              placeholder="City"
-              value="<%= typeof city != 'undefined' ? city : '' %>"
-            />
-          </div>
-          <div class="form-group">
-            <label for="password"><b>Password</b></label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              class="form-control"
-              placeholder="Create Password"
-              value="<%= typeof password != 'undefined' ? password : '' %>"
-            />
-          </div>
-          <div class="form-group">
-            <label for="password2"><b>Confirm Password</b></label>
-            <input
-              type="password"
-              id="password2"
-              name="password2"
-              class="form-control"
-              placeholder="Confirm Password"
-              value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
-            />
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">
-            Register
-          </button>
-        </form>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/register.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Deca">
+    <title>Handy Manny - Register</title>
+</head>
+<body>
+    <img class="side-img" src="https://cdn.discordapp.com/attachments/745141823210782720/745551737020088331/unknown.png">
+    <div class="right">
+        <div class="content">
+            <h1>Create an account</h1>
+            <p>we don't share your information with anyone.</p>
+            <%- include('./partials/messages') %>
+            <form autocomplete="autocomplete_off_hack_xfr4!k" action="/register" method="POST">
+                <input placeholder="Name" type="text" name="name" value="<%= typeof name != 'undefined' ? name : '' %>">
+                <input placeholder="Email address" name="email" type="email" value="<%= typeof email != 'undefined' ? email : '' %>" >
+                <input type="password" placeholder="Password" name="password" value="<%= typeof password != 'undefined' ? password : '' %>">
+                <button type="submit" >Signup</button>
+                <a style="text-decoration: none;" href="/login"><p id="sp" >login instead ?</p></a>
+            </form>
+            <b><p id="bottom-text">Handy Manny.</p></b>
+        </div>
     </div>
-  </div>
+</body>
+</html>
