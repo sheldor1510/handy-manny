@@ -12,57 +12,32 @@
 <body>
     <div class="topnav" id="myTopnav">
         <b><a id="navbar-title" href="#home">handy manny.</a></b>
-        <a href="/dashboard">Book Tickets</a>
-        <a href="/deals">Deals</a>
-        <a href="/train-status">Train Status</a>
-        <a href="/schedule">Schedule</a>
-        <a href="/profile">Profile</a>
-        <a href="/my-bookings">My Bookings</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/book-tickets">Book Tickets</a>
+        <a href="/track">Track</a>
+        <a href="/account">Account</a>
         <a href="/logout">Logout</a>
         <a id="navbar-title" href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i style="font-size: 2rem;" class="fa fa-bars"></i>
         </a>
     </div>
-    <h1 id="main-header">Rachit, where would you like to go next ?</h1>
-    <p class="main-hint-text">book a ticket</p>
-    <div class="container"> 
-        <div class="box"> 
-            <div class="box-row"> 
-                <div class="box-cell box1"> 
-                    <p class="from">FROM</p>
-                    <h1 class="place">New Delhi</h1>
-                    <p class="location">samyapur badli</p>
-                </div> 
-                <div class="box-cell box2"> 
-                    <p class="from">TO</p>
-                    <h1 class="place">Gurgaon</h1>
-                    <p class="location">huda city centre, sector-29</p>
-                </div> 
-            </div> 
-        </div> 
-    </div> 
-    <img class="arrow-icon" src="https://cdn.discordapp.com/attachments/745141823210782720/746385989810782308/unknown.png">
-        <label class="radio-1">
-          <input type="radio" name="optradio">  One-way
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">  Round Trip
-        </label>
-          <a href="/select-dates"><button class="continue">Continue</button></a>
-    <table>
-        <tr>
-          <th>Estimated Travel Time</th>
-          <th>Ticket Cost</th>
-          <th>Expected Attendance</th>
-          <th>Platform Changes</th>
-        </tr>
-        <tr>
-          <td>1hr 45mins</td>
-          <td>$20</td>
-          <td>60 people</td>
-          <td>4</td>
-        </tr>
-    </table>
-    <script src="/js/dashboard.js"></script>
+    <h1 id="main-header">Namaste, <%- name %>.</h1>
+    <p class="main-hint-text">scheduled metro(s)</p>
+    <div class="big-div">
+        <div class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para">From Samyapur Badli Metro Station <br> To Huda City Centre Metro Station</p><p class="train-hint-text">Departure at Thursday, 9:00 AM<br>Return at Thursday, 9:30 PM </p></div>
+        <div id="second-div" class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para">From Samyapur Badli Metro Station <br> To Huda City Centre Metro Station</p><p class="train-hint-text">Departure at Thursday, 9:00 AM<br>Return at Thursday, 9:30 PM </p></div>
+    </div>
+    <p class="main-hint-text">travel history</p>
+    <div class="big-div">
+        <div class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para" class="responsive" >From Samyapur Badli Metro Station <br> To Huda City Centre Metro Station</p><p class="train-hint-text">Departure at Thursday, 9:00 AM<br>Return at Thursday, 9:30 PM </p></div>
+        <div id="second-div" class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para">From Samyapur Badli Metro Station <br> To Huda City Centre Metro Station</p><p class="train-hint-text">Departure at Thursday, 9:00 AM<br>Return at Thursday, 9:30 PM </p></div>
+    </div>
+    <p class="main-hint-text">deals and offers</p>
+    <div class="big-div">
+        <div class="train-div"><img style="padding-top: 1%;" src="https://cdn.discordapp.com/attachments/733943303493386282/746454327174103112/unknown.png" id="train-icon"></img><p id="train-para">20% off for using HDFC<br>Mastercard</p><p class="train-hint-text">This deal is only valid till 2nd September. You'll<br>regret not taking advantage of it.</p></div>
+        <div id="second-div" class="train-div"><img style="padding-top: 1%;" src="https://cdn.discordapp.com/attachments/733943303493386282/746454327174103112/unknown.png" id="train-icon"></img><p id="train-para">20% off for using HDFC<br>Mastercard</p><p class="train-hint-text">This deal is only valid till 2nd September. You'll<br>regret not taking advantage of it.</p></div>
+    </div>
+    <br><br><br>
+    <script src="/js/navbar.js"></script>
 </body>
 </html>

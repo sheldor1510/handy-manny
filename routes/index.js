@@ -12,6 +12,11 @@ res.render('dashboard', {
     name: req.user.name
 }))
 
+router.get('/book-tickets', ensureAuthenticated, (req, res) => 
+res.render('book-tickets', {
+    name: req.user.name
+}))
+
 router.get('/profile', ensureAuthenticated, (req, res) => 
 res.render('profile', {
     name: req.user.name,
@@ -141,9 +146,17 @@ router.post('/login', (req, res, next) => {
     })(req, res , next);
 })
 
-router.get('/select-dates', ensureAuthenticated, (req, res) => res.render('dashboard2'));
+router.get('/select-dates', ensureAuthenticated, (req, res) => res.render('select-dates', {
+    name: req.user.name
+}))
 
-router.get('/pay', ensureAuthenticated, (req, res) => res.render('pay'));
+router.get('/pay', ensureAuthenticated, (req, res) => res.render('pay', {
+    name: req.user.name
+}))
+
+router.get('/track', ensureAuthenticated, (req, res) => res.render('track', {
+    name: req.user.name
+}))
 
 router.get('/logout', (req, res, next) => {
     req.logout();

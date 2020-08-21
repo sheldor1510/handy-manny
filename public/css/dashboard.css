@@ -50,128 +50,53 @@
   color: gray;
 }
 
-.container .box { 
-  height: 300px;
-  width: 130%;
-  margin-left: -160px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 7px 7px 7px 7px whitesmoke;
-  display: table;
-} 
-.container .box .box-row { 
-  display:table-row; 
-} 
-.container .box .box-cell { 
-  display:table-cell; 
-  width:50%; 
-  padding:10px; 
-  padding-left: 50px;
-  padding-top: 30px;
-  border-style: solid;
-  border-color: gray;
-  border-width: 0.5px;
-} 
+#train-icon {
+  font-size: 4rem; 
+  padding-left: 5%;
+}
 
-.from {
+#train-para {
+  padding-left: 40%;
+  margin-top: -7.4rem;
   font-family: 'Lexend Deca';
   font-size: 1.3rem;
-  font-weight: bolder;
 }
 
-.place {
+.train-hint-text {
   font-family: 'Lexend Deca';
-  font-weight: 900;
-  font-size: 7rem;
-  color: #3C4CEA;
-}
-
-.location {
-  font-family: 'Lexend Deca';
-  font-size: 1.8rem;
+  padding-left: 40%;
+  font-size: 1rem;
+  margin-top: -1rem;
   color: gray;
 }
 
-.container .box .box-cell.box1 { 
-  background:white; 
-  border-radius: 15px 0px 0px 15px;
-  color:black; 
-  text-align:justify; 
-} 
-.container .box .box-cell.box2 { 
-  background:white; 
-  border-radius: 0px 15px 15px 0px;
-  text-align:justify 
-} 
-
-.radio-1 {
-  margin-left: -730px;
-  font-size: 1.3rem;
-  font-family: 'Lexend Deca';
-}
-
-.radio-inline {
-  margin-left: 30px;
-  font-size: 1.3rem;
-  font-family: 'Lexend Deca';
-}
-
-.continue {
-  height: 35px;
-  width: 100px;
-  font-family: 'Lexend Deca';
-  color: white;
-  background-color: #3C4CEA;
-  border-radius: 7px;
-  font-size: 1rem;
-  border: none;
-  margin-left: 66rem;
-  margin-top: 1rem;
-}
-
-#tickets-continue {
-  height: 35px;
-  width: 100px;
-  font-family: 'Lexend Deca';
-  color: white;
-  background-color: #3C4CEA;
-  border-radius: 7px;
-  font-size: 1rem;
-  border: none;
-  margin-left: 74rem;
-  margin-top: 1rem;
-}
-
-table, th, td {
-  border: 1px solid black;
-}
-
-th {
-  font-weight: normal;
-}
-
-table {
-  width: 75%;
-  margin-left: 260px;
-  margin-top: 3rem;
+.train-fees {
+  padding-left: 85%;
+  margin-top: -6rem;
   font-size: 2rem;
   font-family: 'Lexend Deca';
-  text-align: center;
+  color: #3C4CEA;
 }
 
-th, td {
-  padding: 15px;
+.train-div {
+  height: 170px;
+  width: 35%;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  background-color: white;
+  margin-left: 250px;
+  border-radius: 10px;
 }
 
-#tickets-input {
-  width: 50px;
-  margin-left: 230px;
-  text-align: center;
+.big-div {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
 
-.arrow-icon {
-  margin-left: 59rem;
-  margin-top: -20rem;
+#second-div {
+  margin-left: 30px;
 }
 
 @media screen and (max-width: 2500px) {
@@ -198,43 +123,25 @@ th, td {
 }  
 
 @media screen and (max-width: 1600px) {
-  .container .box { 
-    height: 100px;
-    width: 100%;
-    margin-left: -10px;
-  }
-  table {
-    width: 73%;
+  .train-div {
     margin-left: 200px;
-    font-size: 1.7rem;
-    margin-bottom: 2rem;
+    width: 40%;
+    border-radius: 10px;
   }
-  .place {
-    font-size: 6rem;
+  #train-icon {
+    font-size: 2rem; 
   }
-  .radio-1 {
-    margin-left: -580px;
-    margin-top: 1rem;
+  #train-para {
+      font-size: 1rem;
+      padding-left: 40%;
+  }
+  .train-hint-text {
+      padding-left: 40%;
   }
   #main-header {
-    padding-top: 10px;
     padding-left: 200px;
   }
   .main-hint-text {
-    padding-top: 30px;
     padding-left: 200px;
-  }
-  .continue {
-    margin-left: 75rem;
-    margin-top: -5rem;
-  }
-  #tickets-input {
-    margin-top: 1rem;
-    margin-left: 190px;
-  }
-  .arrow-icon {
-    margin-left: 46rem;
-    margin-top: -19rem;
-    z-index: 1;
   }
 }

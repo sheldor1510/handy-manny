@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/dashboard.css" />
+    <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend Deca">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Handy Manny</title>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <b><a id="navbar-title" href="#">handy manny.</a></b>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/book-tickets">Book Tickets</a>
+        <a href="/track">Track</a>
+        <a href="/account">Account</a>
+        <a href="/logout">Logout</a>
+        <a id="navbar-title" href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i style="font-size: 2rem;" class="fa fa-bars"></i>
+        </a>
+    </div>
+    <h1 id="main-header"><%- name %>, when would you like to go?</h1>
+    <p class="main-hint-text">book a ticket</p>
+    <div class="container"> 
+        <div class="box"> 
+            <div class="box-row"> 
+                <div class="box-cell box1"> 
+                    <p class="from">DEPARTURE</p>
+                    <h1 class="place">20 Aug</h1>
+                    <p class="location">Thursday, 9:30 AM</p>
+                </div> 
+                <div class="box-cell box2"> 
+                    <p class="from">RETURN</p>
+                    <h1 class="place">21 Aug</h1>
+                    <p class="location">Thursday, 9:30 PM</p>
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    <!-- <img class="arrow-icon" src="https://cdn.discordapp.com/attachments/745141823210782720/746385989810782308/unknown.png"> -->
+        <label class="radio-inline">
+          <input id="tickets-input" type="input" name="optradio">  Tickets
+        </label>
+        <a href="/pay"><button id="tickets-continue">Continue</button></a>
+    <table>
+        <tr>
+          <th>Estimated Travel Time</th>
+          <th>Ticket Cost</th>
+          <th>Expected Attendance</th>
+          <th>Platform Changes</th>
+        </tr>
+        <tr>
+          <td>1hr 45mins</td>
+          <td>$20</td>
+          <td>60 people</td>
+          <td>4</td>
+        </tr>
+    </table>
+    <script src="/js/navbar.js"></script>
+</body>
+</html>

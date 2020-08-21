@@ -11,19 +11,17 @@
 </head>
 <body>
     <div class="topnav" id="myTopnav">
-        <b><a id="navbar-title" href="#home">handy manny.</a></b>
-        <a href="/dashboard">Book Tickets</a>
-        <a href="/deals">Deals</a>
-        <a href="/train-status">Train Status</a>
-        <a href="/schedule">Schedule</a>
-        <a href="/profile">Profile</a>
-        <a href="/my-bookings">My Bookings</a>
+        <b><a id="navbar-title" href="#">handy manny.</a></b>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/book-tickets">Book Tickets</a>
+        <a href="/track">Track</a>
+        <a href="/account">Account</a>
         <a href="/logout">Logout</a>
         <a id="navbar-title" href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i style="font-size: 1.5rem;" class="fa fa-bars"></i>
         </a>
     </div>
-    <h1 id="main-header">Rachit, how would you like to pay?</h1>
+    <h1 id="main-header"><%- name %>, how would you like to pay?</h1>
     <p class="main-hint-text">book a ticket</p>
     <div class="pay-div">
         <h1>Payment Method</h1>
@@ -56,6 +54,6 @@
         <button id="confirm">Confirm Order</button>
     </div>
     <div class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para">From Samyapur Badli Metro Station <br> To Huda City Centre Metro Station</p><p class="train-hint-text">Departure at Thursday, 9:00 AM<br>Return at Thursday, 9:30 PM </p><p class="train-fees"><b>$20</b></p></div>
-    <script src="/js/dashboard.js"></script>
+    <script src="/js/navbar.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="/css/track.css" />
     <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend Deca">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,19 +12,17 @@
 <body>
     <div class="topnav" id="myTopnav">
         <b><a id="navbar-title" href="#home">handy manny.</a></b>
-        <a href="/dashboard">Book Tickets</a>
-        <a href="/deals">Deals</a>
-        <a href="/train-status">Train Status</a>
-        <a href="/schedule">Schedule</a>
-        <a href="/profile">Profile</a>
-        <a href="/my-bookings">My Bookings</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/book-tickets">Book Tickets</a>
+        <a href="/track">Track</a>
+        <a href="/account">Account</a>
         <a href="/logout">Logout</a>
         <a id="navbar-title" href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i style="font-size: 2rem;" class="fa fa-bars"></i>
         </a>
     </div>
-    <h1 id="main-header">Rachit, when would you like to go?</h1>
-    <p class="main-hint-text">book a ticket</p>
+    <h1 id="main-header"><%- name %>, track any metro.</h1>
+    <p class="main-hint-text">get live updates of a metro</p>
     <div class="container"> 
         <div class="box"> 
             <div class="box-row"> 
@@ -41,25 +39,13 @@
             </div> 
         </div> 
     </div> 
-    <!-- <img class="arrow-icon" src="https://cdn.discordapp.com/attachments/745141823210782720/746385989810782308/unknown.png"> -->
-        <label class="radio-inline">
-          <input id="tickets-input" type="input" name="optradio">  Tickets
-        </label>
-        <a href="/pay"><button id="tickets-continue">Continue</button></a>
-    <table>
-        <tr>
-          <th>Estimated Travel Time</th>
-          <th>Ticket Cost</th>
-          <th>Expected Attendance</th>
-          <th>Platform Changes</th>
-        </tr>
-        <tr>
-          <td>1hr 45mins</td>
-          <td>$20</td>
-          <td>60 people</td>
-          <td>4</td>
-        </tr>
-    </table>
-    <script src="/js/dashboard.js"></script>
+    <img class="arrow-icon" src="https://cdn.discordapp.com/attachments/745141823210782720/746385989810782308/unknown.png">
+    <a href="/dashboard"><button id="tickets-continue">Go back</button></a>
+    <p class="main-hint-text">live route</p>
+    <iframe frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAqgRE9cHWPR1DNN5nQtEDbdCT9Q6JExXw
+    &q=Huda+City+Centre+Station" allowfullscreen>
+</iframe>
+    <script src="/js/navbar.js"></script>
 </body>
 </html>
