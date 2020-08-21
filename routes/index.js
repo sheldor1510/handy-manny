@@ -125,6 +125,10 @@ router.post('/login', (req, res, next) => {
     })(req, res , next);
 })
 
+router.get('/select-dates', ensureAuthenticated, (req, res) => res.render('dashboard2'));
+
+router.get('/pay', ensureAuthenticated, (req, res) => res.render('pay'));
+
 router.get('/logout', (req, res, next) => {
     req.logout();
     req.flash('success_msg', 'You are logged out');

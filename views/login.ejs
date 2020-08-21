@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/login.css" rel="stylesheet" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Deca">
-    <title>Handy Manny - Login</title>
+    <title>Handy Manny</title>
 </head>
 <body>
     <img class="side-img" src="https://cdn.discordapp.com/attachments/745141823210782720/745551737020088331/unknown.png">
@@ -18,9 +18,9 @@
               <input placeholder="Email address" name="email" type="email" value="<%= typeof email != 'undefined' ? email : '' %>" >
               <input type="password" placeholder="Password" name="password" value="<%= typeof password != 'undefined' ? password : '' %>">
               <button type="submit" >Login</button>
-              <a target="_blank" style="text-decoration: none;" href="#"><p id="sp" >Forgot Password?</p></a>
+              <a style="text-decoration: none;" href="/register"><p id="sp" >register instead ?</p></a>
             </form>
-            <b><p id="bottom-text">Handy Manny.</p></b>
+            <b><a style="text-decoration: none;" href="/"><p id="bottom-text">Handy Manny.</p></a></b>
         </div>
     </div>
 </body>

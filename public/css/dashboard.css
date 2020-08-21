@@ -1,0 +1,230 @@
+.topnav {
+    background-color: #3C4CEA;
+    overflow: hidden;
+}
+  
+#navbar-title {
+  font-family: 'Lexend Deca';
+  font-size: 1.4rem;
+  padding-left: 70px;
+  text-decoration: none;
+  color: white;
+  background-color: #3C4CEA;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 70px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: 'Lexend Deca';
+}
+
+.topnav a:hover {
+    color: #3C4CEA;
+    background-color: white;
+    text-decoration: none;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+#main-header {
+  font-family: 'Lexend Deca';
+  padding-left: 250px;
+  font-size: 3rem;
+  padding-top: 10px;
+  color: black;
+  text-align: left;
+}
+
+.main-hint-text {
+  font-family: 'Lexend Deca';
+  padding-left: 250px;
+  padding-top: 50px;
+  font-size: 1.8rem;
+  color: gray;
+}
+
+.container .box { 
+  height: 300px;
+  width: 130%;
+  margin-left: -160px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 7px 7px 7px 7px whitesmoke;
+  display: table;
+} 
+.container .box .box-row { 
+  display:table-row; 
+} 
+.container .box .box-cell { 
+  display:table-cell; 
+  width:50%; 
+  padding:10px; 
+  padding-left: 50px;
+  padding-top: 30px;
+  border-style: solid;
+  border-color: gray;
+  border-width: 0.5px;
+} 
+
+.from {
+  font-family: 'Lexend Deca';
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+.place {
+  font-family: 'Lexend Deca';
+  font-weight: 900;
+  font-size: 7rem;
+  color: #3C4CEA;
+}
+
+.location {
+  font-family: 'Lexend Deca';
+  font-size: 1.8rem;
+  color: gray;
+}
+
+.container .box .box-cell.box1 { 
+  background:white; 
+  border-radius: 15px 0px 0px 15px;
+  color:black; 
+  text-align:justify; 
+} 
+.container .box .box-cell.box2 { 
+  background:white; 
+  border-radius: 0px 15px 15px 0px;
+  text-align:justify 
+} 
+
+.radio-1 {
+  margin-left: 250px;
+  font-size: 1.3rem;
+  font-family: 'Lexend Deca';
+}
+
+.radio-inline {
+  margin-left: 30px;
+  font-size: 1.3rem;
+  font-family: 'Lexend Deca';
+}
+
+.continue {
+  height: 35px;
+  width: 100px;
+  font-family: 'Lexend Deca';
+  color: white;
+  background-color: #3C4CEA;
+  border-radius: 7px;
+  font-size: 1rem;
+  border: none;
+  margin-left: 66rem;
+  margin-top: 1rem;
+}
+
+#tickets-continue {
+  height: 35px;
+  width: 100px;
+  font-family: 'Lexend Deca';
+  color: white;
+  background-color: #3C4CEA;
+  border-radius: 7px;
+  font-size: 1rem;
+  border: none;
+  margin-left: 74rem;
+  margin-top: 1rem;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th {
+  font-weight: normal;
+}
+
+table {
+  width: 75%;
+  margin-left: 260px;
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-family: 'Lexend Deca';
+  text-align: center;
+}
+
+th, td {
+  padding: 15px;
+}
+
+#tickets-input {
+  width: 50px;
+  margin-left: 230px;
+  text-align: center;
+}
+
+@media screen and (max-width: 2500px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 2500px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}  
+
+@media screen and (max-width: 1600px) {
+  .container .box { 
+    height: 100px;
+    width: 100%;
+    margin-left: -10px;
+  }
+  table {
+    width: 73%;
+    margin-left: 200px;
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+  }
+  .place {
+    font-size: 6rem;
+  }
+  .radio-1 {
+    margin-left: 200px;
+    margin-top: 1rem;
+  }
+  #main-header {
+    padding-top: 10px;
+    padding-left: 200px;
+  }
+  .main-hint-text {
+    padding-top: 30px;
+    padding-left: 200px;
+  }
+  .continue {
+    margin-left: 75rem;
+    margin-top: -5rem;
+  }
+  #tickets-input {
+    margin-top: 1rem;
+    margin-left: 190px;
+  }
+}

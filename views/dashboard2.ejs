@@ -23,31 +23,28 @@
           <i style="font-size: 2rem;" class="fa fa-bars"></i>
         </a>
     </div>
-    <h1 id="main-header">Rachit, where would you like to go next ?</h1>
+    <h1 id="main-header">Rachit, when would you like to go?</h1>
     <p class="main-hint-text">book a ticket</p>
     <div class="container"> 
         <div class="box"> 
             <div class="box-row"> 
                 <div class="box-cell box1"> 
-                    <p class="from">FROM</p>
-                    <h1 class="place">New Delhi</h1>
-                    <p class="location">samyapur badli</p>
+                    <p class="from">DEPARTURE</p>
+                    <h1 class="place">20 Aug</h1>
+                    <p class="location">Thursday, 9:30 AM</p>
                 </div> 
                 <div class="box-cell box2"> 
-                    <p class="from">TO</p>
-                    <h1 class="place">Gurgaon</h1>
-                    <p class="location">huda city centre, sector-29</p>
+                    <p class="from">RETURN</p>
+                    <h1 class="place">21 Aug</h1>
+                    <p class="location">Thursday, 9:30 PM</p>
                 </div> 
             </div> 
         </div> 
     </div> 
-        <label class="radio-1">
-          <input type="radio" name="optradio">  One-way
-        </label>
         <label class="radio-inline">
-          <input type="radio" name="optradio">  Round Trip
+          <input id="tickets-input" type="input" name="optradio">  Tickets
         </label>
-          <a href="/select-dates"><button class="continue">Continue</button></a>
+        <a href="/pay"><button id="tickets-continue">Continue</button></a>
     <table>
         <tr>
           <th>Estimated Travel Time</th>

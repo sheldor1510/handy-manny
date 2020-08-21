@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/pay.css" />
+    <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend Deca">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Handy Manny</title>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <b><a id="navbar-title" href="#home">handy manny.</a></b>
+        <a href="/dashboard">Book Tickets</a>
+        <a href="/deals">Deals</a>
+        <a href="/train-status">Train Status</a>
+        <a href="/schedule">Schedule</a>
+        <a href="/profile">Profile</a>
+        <a href="/my-bookings">My Bookings</a>
+        <a href="/logout">Logout</a>
+        <a id="navbar-title" href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i style="font-size: 1.5rem;" class="fa fa-bars"></i>
+        </a>
+    </div>
+    <h1 id="main-header">Rachit, how would you like to pay?</h1>
+    <p class="main-hint-text">book a ticket</p>
+    <div class="pay-div">
+        <h1>Payment Method</h1>
+        <div class="radio-toolbar">
+            <input type="radio" id="radio1" name="radios" value="all" checked>
+            <label for="radio1">Credit Card</label>
+          
+            <input type="radio" id="radio2" name="radios" value="false">
+            <label for="radio2">PayPal</label>
+          
+            <input type="radio" id="radio3" name="radios" value="true">
+            <label for="radio3">Apple Pay</label>
+        </div>
+        <h1 style="margin-top: 2rem;margin-bottom: 1.5rem;">Choose Card</h1>
+        <input type="radio" id="saved">
+        <label>&nbsp;&nbsp;VISA</label><br>
+        <input type="radio" id="saved">
+        <label>&nbsp;&nbsp;Mastercard</label><br>
+        <input type="radio" id="saved">
+        <label>&nbsp;&nbsp;Add New Card</label><br>
+        <h1 id="card-deets">Name on Card</h1>
+        <input class="card-input">
+        <h1 id="card-deets">Card Number</h1>
+        <input class="card-input">
+        <h1 id="card-deets">Exp Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CVV</h1>
+        <input placeholder="MM / YY" class="card-input-half">
+        <input type="password" style="margin-left: 3.8rem;" class="card-input-half"><br>
+        <input type="checkbox" id="save-card">
+        <label>&nbsp;&nbsp;Save this card for future purchases</label>
+        <button id="confirm">Confirm Order</button>
+    </div>
+    <div class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para">From Samyapur Badli Metro Station <br> To Huda City Centre Metro Station</p><p class="train-hint-text">Departure at Thursday, 9:00 AM<br>Return at Thursday, 9:30 PM </p><p class="train-fees"><b>$20</b></p></div>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+.topnav {
+    background-color: #3C4CEA;
+    overflow: hidden;
+}
+  
+#navbar-title {
+  font-family: 'Lexend Deca';
+  font-size: 1.4rem;
+  padding-left: 70px;
+  text-decoration: none;
+  color: white;
+  background-color: #3C4CEA;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 70px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: 'Lexend Deca';
+}
+
+.topnav a:hover {
+    color: #3C4CEA;
+    background-color: white;
+    text-decoration: none;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+#main-header {
+    font-family: 'Lexend Deca';
+    padding-left: 250px;
+    font-size: 3rem;
+    padding-top: 60px;
+    color: black;
+    text-align: left;
+  }
+  
+.main-hint-text {
+    font-family: 'Lexend Deca';
+    padding-left: 250px;
+    padding-top: 50px;
+    font-size: 1.8rem;
+    color: gray;
+}
+
+.pay-div {
+    height: 93vh;
+    width: 606px;
+    margin-left: 68%;
+    overflow: hidden;
+    background-color: lavender;
+    margin-top: -17.2rem;
+    padding-left: 80px;
+}
+ 
+#train-icon {
+    font-size: 4rem; 
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+#train-para {
+    padding-left: 30%;
+    margin-top: -7.4rem;
+    font-family: 'Lexend Deca';
+    font-size: 1.3rem;
+}
+
+.train-hint-text {
+    font-family: 'Lexend Deca';
+    padding-left: 30%;
+    font-size: 1rem;
+    margin-top: -1rem;
+    color: gray;
+}
+
+.train-fees {
+    padding-left: 85%;
+    margin-top: -6rem;
+    font-size: 2rem;
+    font-family: 'Lexend Deca';
+    color: #3C4CEA;
+}
+
+.train-div {
+    height: 170px;
+    width: 45%;
+    margin-top: -40rem;
+    background-color: white;
+    margin-left: 180px;
+}
+
+.pay-div h1 {
+    font-family: 'Lexend Deca';
+    font-size: 1.7rem;
+    margin-top: 80px;
+}
+
+.radio-toolbar {
+    margin-top: 1.4rem;
+}
+
+.radio-toolbar input[type="radio"] {
+    display: none;
+}
+
+.radio-toolbar label {
+    display: inline-block;
+    background-color: white;
+    color: #39328A;
+    border-style: solid;
+    border-color: #39328A;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 4px 11px;
+    font-family: Arial;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Lexend Deca';
+    margin-right: 1rem;
+}
+  
+.radio-toolbar input[type="radio"]:checked+label {
+    background-color: #39328A;
+    color: white;
+}
+
+
+label {
+    font-size: 1.2rem;
+    font-family: 'Lexend Deca'
+}
+
+#card-deets {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    color: grey;
+    font-size: 1.3rem;
+}
+
+.card-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: black;
+    font-family: 'Lexend Deca';
+    font-size: 1.3rem;
+    text-decoration: none;
+    width: 400px;
+}
+
+.card-input-half {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: black;
+    font-family: 'Lexend Deca';
+    font-size: 1.3rem;
+    text-decoration: none;
+    width: 100px;
+}
+
+#confirm {
+    height: 65px;
+    width: 350px;
+    font-family: 'Lexend Deca';
+    color: white;
+    background-color: #39328A;
+    border-radius: 7px;
+    font-size: 1.5rem;
+    border: none;
+    margin-top: 2rem;
+}
+
+#save-card {
+    margin-top: 2rem;
+    height: 20px;
+    width: 20px;
+}
+
+@media screen and (max-width: 2500px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 2500px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}  
+
+
+@media screen and (max-width: 1600px) {
+    #main-header {
+        padding-left: 150px;
+        padding-top: 60px;
+    }
+    .main-hint-text {
+        padding-left: 150px;
+    }
+    .train-div {
+        margin-top: -43rem;
+        margin-left: 100px;
+    }
+    #train-icon {
+        font-size: 4rem; 
+        padding-top: 5%;
+        padding-left: -4rem;
+    }
+    #train-para {
+        padding-left: 35%;
+    }
+    .train-hint-text {
+        padding-left: 35%;
+    }
+    .train-fees {
+        padding-left: 100%;
+    }
+    .pay-div {
+        height: 120vh;
+        width: 485px;
+        margin-top: -16.8rem;
+    }
+    .pay-div h1 {
+        margin-top: 50px;
+    }
+    .card-input {
+        width: 300px;
+    }
+}
