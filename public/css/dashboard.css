@@ -105,7 +105,7 @@
 } 
 
 .radio-1 {
-  margin-left: 250px;
+  margin-left: -730px;
   font-size: 1.3rem;
   font-family: 'Lexend Deca';
 }
@@ -169,6 +169,11 @@ th, td {
   text-align: center;
 }
 
+.arrow-icon {
+  margin-left: 59rem;
+  margin-top: -20rem;
+}
+
 @media screen and (max-width: 2500px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -208,7 +213,7 @@ th, td {
     font-size: 6rem;
   }
   .radio-1 {
-    margin-left: 200px;
+    margin-left: -580px;
     margin-top: 1rem;
   }
   #main-header {
@@ -226,5 +231,10 @@ th, td {
   #tickets-input {
     margin-top: 1rem;
     margin-left: 190px;
+  }
+  .arrow-icon {
+    margin-left: 46rem;
+    margin-top: -19rem;
+    z-index: 1;
   }
 }

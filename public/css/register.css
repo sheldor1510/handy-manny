@@ -22,7 +22,7 @@ body {
     display: block;
     margin: auto;
     text-align: center;
-    margin-top: -57rem;
+    margin-top: -64rem;
     margin-right: -30rem;
 }
 
@@ -64,8 +64,14 @@ body {
     font-size: 1rem;
 }
 
+.content form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
 #sp {
-    margin-right: -20rem;
+    margin-left: 64rem;
     margin-top: -2rem;
 }
 
@@ -75,10 +81,21 @@ body {
 }
 
 #bottom-text {
-    margin-top: 13rem;
+    margin-top: 4rem;
     margin-right: 100rem;
     color:white;
     font-size: 1.8rem;
+}
+
+#city-input {
+    width: 300px;
+    margin-right:0rem;
+}
+
+#state-input {
+    width: 300px;
+    margin-left: 83.5rem;
+    margin-top: -4rem!important;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -87,7 +104,7 @@ body {
         margin-top: -8rem;
     }
     .content h1 {
-        margin-top: -60rem;
+        margin-top: -68rem;
         margin-right: -20rem;
     }
     .content p {
@@ -103,11 +120,20 @@ body {
         margin-left: 71rem;
     }
     #sp {
-        margin-right: -10rem;
+        margin-left: 47rem;
     }
     #bottom-text {
-        margin-top: 6rem;
+        margin-top: -1rem;
         margin-right: 71rem;
+    }
+    #city-input {
+        width: 240px;
+        margin-right:0rem;
+    }
+    #state-input {
+        width: 240px;
+        margin-left: 62.3rem;
+        margin-top: -3.2rem!important;
     }
   }
 

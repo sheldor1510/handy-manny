@@ -18,6 +18,10 @@
                 <input placeholder="Name" type="text" name="name" value="<%= typeof name != 'undefined' ? name : '' %>">
                 <input placeholder="Email address" name="email" type="email" value="<%= typeof email != 'undefined' ? email : '' %>" >
                 <input type="password" placeholder="Password" name="password" value="<%= typeof password != 'undefined' ? password : '' %>">
+                <input placeholder="Gender" name="gender" type="text" value="<%= typeof gender != 'undefined' ? gender : '' %>" >
+                <input placeholder="Age" name="age" type="tel" value="<%= typeof age != 'undefined' ? age : '' %>" >
+                <input id="city-input" placeholder="City" name="city" type="text" value="<%= typeof city != 'undefined' ? city : '' %>" >
+                <input id="state-input"  placeholder="State" name="state" type="text" value="<%= typeof state != 'undefined' ? state : '' %>" >
                 <button type="submit" >Signup</button>
                 <a style="text-decoration: none;" href="/login"><p id="sp" >login instead ?</p></a>
             </form>

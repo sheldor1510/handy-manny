@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs')
 const passport = require('passport')
 const { ensureAuthenticated } = require('../config/auth');
 
-router.get('/', (req, res) => res.render('welcome'))
+router.get('/', (req, res) => res.render('home'))
 
 router.get('/dashboard', ensureAuthenticated, (req, res) => 
 res.render('dashboard', {
@@ -62,15 +62,19 @@ router.get('/login', (req, res) => res.render('login'));
 router.get('/register', (req, res) => res.render('register'));
 
 router.post('/register', (req, res) => {
-    const { name, email, password, password2, age, city } = req.body;
+    const { name, email, password, age, city, gender, state } = req.body;
     let errors = [];
 
-    if(!name || !email || !password ) {
+    if(!name || !email || !password|| !age|| !city|| !gender|| !state ) {
         errors.push({ msg: 'Please fill in all fields' });
     }
 
     if(password.length < 6) {
         errors.push({ msg: 'Password should be atleast 6 characters' })
+    }
+
+    if(age < 16) {
+        errors.push({ msg: 'You should atleast be 16 years old to create an account.' })
     }
 
     if(errors.length > 0) {
@@ -79,6 +83,10 @@ router.post('/register', (req, res) => {
             name,
             email,
             password,
+            age,
+            city,
+            gender,
+            state
         })
     } else {
         User.findOne({ email: email })
@@ -90,12 +98,20 @@ router.post('/register', (req, res) => {
                         name,
                         email,
                         password,
+                        age,
+                        city,
+                        gender,
+                        state
                     })
                 } else {
                     const newUser = new User({
                         name,
                         email,
-                        password
+                        password,
+                        city,
+                        age,
+                        gender,
+                        state,
                     })
                     
                     bcrypt.genSalt(10, (err, salt) => bcrypt.hash(newUser.password, salt, (err, hash) => {
