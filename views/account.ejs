@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/account.css" />
+    <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend Deca">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Handy Manny</title>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <b><a id="navbar-title" href="#home">handy manny.</a></b>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/book-tickets">Book Tickets</a>
+        <a href="/track">Track</a>
+        <a href="/account">Account</a>
+        <a href="/logout">Logout</a>
+        <a id="navbar-title" href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i style="font-size: 2rem;" class="fa fa-bars"></i>
+        </a>
+    </div>
+    <h1 id="main-header"><%- name %>, edit your profile.</h1>
+    <div class="bigger-div">
+        <div class="menu-div">
+            <img src="/images/user_icon.png" class="prof-img">
+            <b><p class="prof-name"><%- name %></p></b>
+            <a style="text-decoration: none;color: black;" href="/account"><div class="menu-item1"><i style="font-size:2rem" class="fa fa-user"></i> Edit profile</div></a>
+            <a style="text-decoration: none;color:black" href="/change-password"><div class="menu-item2"><i style="font-size:2rem" class="fa fa-eye"></i> Change password</div></a>
+        </div>
+        <div class="action-div">
+            <% if(show_cp == '')  { %>
+                <h1>Edit profile</h1>
+                <%- include('./partials/messages') %>
+                <form autocomplete="autocomplete_off_hack_xfr4!k" action="/account" method="POST">
+                    <input placeholder="Name" type="text" name="name" value="<%= typeof name != 'undefined' ? name : '' %>">
+                    <input placeholder="Email address" name="email" type="email" value="<%= typeof email != 'undefined' ? email : '' %>" >
+                    <input placeholder="Gender" name="gender" type="text" value="<%= typeof gender != 'undefined' ? gender : '' %>" >
+                    <input placeholder="Age" name="age" type="tel" value="<%= typeof age != 'undefined' ? age : '' %>" >
+                    <input id="city-input" placeholder="City" name="city" type="text" value="<%= typeof city != 'undefined' ? city : '' %>" >
+                    <input id="state-input"  placeholder="State" name="state" type="text" value="<%= typeof state != 'undefined' ? state : '' %>" >
+                    <button type="submit" >Save profile</button>
+                    <a style="text-decoration: none;color: black;" href="/account"><p>cancel</p></a>
+                </form>
+            <% } 
+                else { %> 
+                    <h1>Change password</h1>
+                    <%- include('./partials/messages') %>
+                    <form autocomplete="autocomplete_off_hack_xfr4!k" action="/change-password" method="POST">
+                        <input placeholder="New password" name="new_password" type="password" value="<%= typeof new_password != 'undefined' ? new_password : '' %>" >
+                        <input placeholder="Repeat new password" name="new_password2" type="password" value="<%= typeof new_password2 != 'undefined' ? new_password2 : '' %>" >
+                        <button type="submit" id="new_pass_button">Set new password</button>
+                        <a style="text-decoration: none;color: black;" href="/change-password"><p id="new_pass_p">cancel</p></a>
+                    </form>
+                <%}
+            %>
+            
+        </div>
+    </div>
+    <script src="/js/navbar.js"></script>
+</body>
+</html>

@@ -17,46 +17,49 @@ res.render('book-tickets', {
     name: req.user.name
 }))
 
-router.get('/profile', ensureAuthenticated, (req, res) => 
-res.render('profile', {
-    name: req.user.name,
-    email: req.user.email,
-}))
-
-router.post('/profile', ensureAuthenticated, (req, res) => {
-    const { name, email } = req.body;
+router.post('/account', ensureAuthenticated, (req, res) => {
+    const { name, email, age, gender, city, state } = req.body;
     let errors = [];
 
     User.findById(req.user.id, function (err, user) {
 
         if (!user) {
             req.flash('error', 'No account found');
-            return res.redirect('/profile');
+            return res.redirect('/account');
         }
 
 
-        if(!name || !email ) {
+        if(!name || !email || !age || !city || !gender || !state ) {
             errors.push({ msg: 'Please fill in all fields' });
         }
     
 
         if(errors.length > 0) {
-            res.render('profile', {
+            res.render('account', {
                 errors,
                 name,
                 email,
+                age,
+                city,
+                state,
+                gender,
+                show_cp: ''
             })
         }
 
         user.email =  email;
         user.name = name;
+        user.city = city;
+        user.age = age;
+        user.gender = gender;
+        user.state = state;
 
         user.save(function (err) {
             if(err) {
                 console.log(err)
             }
             req.flash('success_msg', 'Your profile was updated')
-            res.redirect('/profile')
+            res.redirect('/account')
         })
     });
 
@@ -157,6 +160,65 @@ router.get('/pay', ensureAuthenticated, (req, res) => res.render('pay', {
 router.get('/track', ensureAuthenticated, (req, res) => res.render('track', {
     name: req.user.name
 }))
+
+router.get('/account', ensureAuthenticated, (req, res) => res.render('account', {
+    name: req.user.name,
+    email: req.user.email,
+    age: req.user.age,
+    gender: req.user.gender,
+    city: req.user.city,
+    state: req.user.state,
+    show_cp: ''
+}))
+
+router.get('/change-password', ensureAuthenticated, (req, res) => res.render('account', {
+    name: req.user.name,
+    show_cp: 'show'
+}))
+
+router.post('/change-password', ensureAuthenticated, (req, res) => {
+    const { new_password, new_password2 } = req.body;
+    let errors = [];
+
+    if(!new_password || !new_password2 ) {
+        errors.push({ msg: 'Please fill in all fields' });
+    }
+
+    if(new_password != new_password2) {
+        errors.push({ msg: 'New passwords do not match' })
+    }
+
+    if(new_password.length < 6) {
+        errors.push({ msg: 'Password should be atleast 6 characters' })
+    }
+
+    if(errors.length > 0) {
+        res.render('account', {
+            errors,
+            name: req.user.name,
+            new_password,
+            new_password2,
+            show_cp: 'show'
+        })
+    }
+    User.findById(req.user.id, function (err, user) {
+        bcrypt.genSalt(10, (err, salt) => bcrypt.hash(new_password, salt, (err, hash) => {
+            if(err) throw err;
+
+            user.password = hash;
+
+            user.save(function (err) {
+            if(err) {
+                console.log(err)
+            }
+            req.flash('success_msg', 'Your password was succesfully updated')
+            res.redirect('/change-password')
+            })
+        }))
+    })
+    
+
+})
 
 router.get('/logout', (req, res, next) => {
     req.logout();

@@ -1,6 +1,10 @@
 .topnav {
     background-color: #3C4CEA;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
 }
   
 #navbar-title {
@@ -35,21 +39,171 @@
 
 #main-header {
   font-family: 'Lexend Deca';
-  padding-left: 250px;
-  font-size: 3rem;
-  padding-top: 10px;
+  font-size: 8rem;
+  padding-top: 28vh;
   color: black;
-  text-align: left;
+  text-align: center;
 }
 
 .main-hint-text {
   font-family: 'Lexend Deca';
-  padding-left: 250px;
-  padding-top: 0px;
-  font-size: 1.8rem;
+  text-align: center;
+  margin-top: -1rem;
+  font-size: 5rem;
   color: gray;
 }
 
+.video-play-button {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-sizing: content-box;
+  display: block;
+  width: 32px;
+  height: 44px;
+  /* background: #fa183d; */
+  border-radius: 50%;
+  padding: 18px 20px 18px 28px;
+}
+
+.video-play-button:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: #ba1f24;
+  border-radius: 50%;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+
+.video-play-button:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: #fa183d;
+  border-radius: 50%;
+  transition: all 200ms;
+}
+
+.video-play-button:hover:after {
+  background-color: darken(#fa183d, 10%);
+}
+
+.video-play-button img {
+  position: relative;
+  z-index: 3;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.video-play-button span {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  border-left: 32px solid #fff;
+	border-top: 22px solid transparent;
+	border-bottom: 22px solid transparent;
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+
+#play-video {
+  margin-top: 13vh;
+  margin-left: -1rem;
+}
+
+.home-heading {
+  font-family: 'Lexend Deca';
+  text-align: center;
+  margin-top: 41vh;
+  font-size: 4rem;
+  color: black;
+}
+
+.home-para {
+  font-family: 'Lexend Deca';
+  text-align: center;
+  padding-left: 20vw;
+  font-size: 2.4rem;
+  color: gray;
+  padding-right: 20vw;
+}
+
+#img-grid {
+  display: block;
+  margin: auto;
+  margin-left: 30vw;
+  margin-bottom: 10rem;
+}
+
+#small-img {
+  border-radius: 10px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  width: 240px;
+  height: 160px;
+}
+
+#small-img1 {
+  border-radius: 10px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 8rem;
+  width: 240px;
+  height: 160px;
+}
+
+#route-small-img {
+  border-radius: 10px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  width: 600px;
+  height: 450px;
+  display: block;
+  margin: auto;
+  margin-bottom: 10rem;
+}
+
+iframe {
+  display: block;
+  margin:auto;
+  border-radius: 10px;
+  margin-bottom: 10rem;
+  margin-top: 2rem;
+  height: 600px;
+  width: 900px;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+}
 @media screen and (max-width: 2500px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -74,11 +228,36 @@
 
 @media screen and (max-width: 1600px) {
   #main-header {
-    padding-top: 10px;
-    padding-left: 200px;
+    font-family: 'Lexend Deca';
+    font-size: 6.6rem;
+    padding-top: 28vh;
+    color: black;
+    text-align: center;
   }
+  
   .main-hint-text {
-    padding-top: 30px;
-    padding-left: 200px;
+    font-family: 'Lexend Deca';
+    text-align: center;
+    margin-top: -1rem;
+    font-size: 4.6rem;
+    color: gray;
+  }
+  .home-heading {
+    font-size: 3rem;
+  }
+  .home-para {
+    font-size: 1.8rem;
+  }
+  iframe {
+    height: 500px;
+    width: 900px;
+    margin-bottom: 5rem;
+  }
+  #img-grid {
+    margin-left: 25vw;
+  }
+  #play-video {
+    margin-top: 8rem;
+    margin-left: -1rem;
   }
 }
