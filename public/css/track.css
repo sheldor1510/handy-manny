@@ -181,6 +181,19 @@ iframe {
     margin-bottom: 4rem;
 }
 
+#tickets-confirmed {
+  height: 35px;
+  width: 100px;
+  font-family: 'Lexend Deca';
+  color: white;
+  background-color: #3C4CEA;
+  border-radius: 7px;
+  font-size: 1rem;
+  border: none;
+  margin-left: 250px;
+  margin-top: 2rem;
+}
+
 @media screen and (max-width: 2500px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -226,6 +239,9 @@ iframe {
   #main-header {
     padding-top: 10px;
     padding-left: 200px;
+  }
+  #tickets-confirmed {
+    margin-left: 200px;
   }
   .main-hint-text {
     padding-top: 30px;

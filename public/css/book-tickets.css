@@ -40,6 +40,7 @@
   padding-top: 10px;
   color: black;
   text-align: left;
+  font-weight: bolder;
 }
 
 .main-hint-text {
@@ -105,7 +106,7 @@
 } 
 
 .radio-1 {
-  margin-left: -730px;
+  margin-left: 16rem;
   font-size: 1.3rem;
   font-family: 'Lexend Deca';
 }
@@ -171,7 +172,55 @@ th, td {
 
 .arrow-icon {
   margin-left: 59rem;
-  margin-top: -20rem;
+  margin-top: -22rem;
+}
+
+.choose-location {
+  height: 35px;
+  width: 160px;
+  font-family: 'Lexend Deca';
+  color: white;
+  background-color: #3C4CEA;
+  border-radius: 7px;
+  font-size: 1rem;
+  margin-left: 79%;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+
+#dropdown-selector {
+  height: 40px;
+  width: 200px;
+  font-size: 1.2rem;
+  font-family: 'Lexend Deca';
+}
+
+#modal-body {
+  width: 250px;
+}
+#dropdown-selector1 {
+  height: 40px;
+  width: 100px;
+  font-size: 1.2rem;
+  font-family: 'Lexend Deca';
+}
+#dropdown-selector2 {
+  height: 40px;
+  width: 150px;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Lexend Deca';
+}
+#dropdown-selector3 {
+  height: 40px;
+  width: 100px;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Lexend Deca';
+}
+#modal-body2 {
+  width: 427px;
 }
 
 @media screen and (max-width: 2500px) {
@@ -198,6 +247,9 @@ th, td {
 }  
 
 @media screen and (max-width: 1600px) {
+  .choose-location {
+    margin-left: 73%;
+  }
   .container .box { 
     height: 100px;
     width: 100%;
@@ -213,8 +265,8 @@ th, td {
     font-size: 6rem;
   }
   .radio-1 {
-    margin-left: -580px;
-    margin-top: 1rem;
+    margin-left: 13rem;
+    margin-top: -2rem;
   }
   #main-header {
     padding-top: 10px;

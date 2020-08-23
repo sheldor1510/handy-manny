@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User')
+const Booking = require('../models/Booking')
 const bcrypt = require('bcryptjs')
 const passport = require('passport')
 const { ensureAuthenticated } = require('../config/auth');
@@ -218,6 +219,81 @@ router.post('/change-password', ensureAuthenticated, (req, res) => {
     })
     
 
+})
+
+router.post('/choose-from', ensureAuthenticated, (req, res) => {
+    const { From_Locations, To_Locations } = req.body;
+    res.render('book-tickets', {
+        name: req.user.name,
+        from_location: From_Locations,
+        to_location: To_Locations
+    })
+})
+
+router.post('/choose-dates', ensureAuthenticated, (req, res) => {
+    const { Departure_Dates, Departure_Day, Departure_Time, Arrival_Dates, Arrival_Day, Arrival_Time } = req.body;
+    res.render('select-dates', {
+        name: req.user.name,
+        departure_date: Departure_Dates,
+        arrival_date: Arrival_Dates,
+        departure_day_time: Departure_Day + ', ' + Departure_Time,
+        arrival_day_time: Arrival_Day + ', ' + Arrival_Time
+    })
+})
+
+router.post('/book-tickets', ensureAuthenticated, (req, res) => {
+    const { from_location, to_location, optradio } = req.body;
+    const newBooking = new Booking({
+        user_id: req.user.id,
+        from_location,
+        to_location,
+        type: optradio,
+        status: 'incomplete',
+    })
+    newBooking.save()
+        .then(booking => {
+            User.findById(req.user.id, function (err, user) {
+                user.current_booking_id = newBooking.id
+                user.save(function (err) {
+                    if(err) {
+                        console.log(err)
+                        res.sendStatus(500);
+                        return;
+                    }
+                })
+                if(err) {
+                    console.log(err)
+                    res.sendStatus(500);
+                    return;
+                }
+            })
+            
+        })
+        .catch(err => console.log(err))
+    res.redirect('/select-dates')
+})
+
+router.post('/select-dates', ensureAuthenticated, (req, res) => {
+    const { tickets, departure_date, arrival_date, departure_day_time, arrival_day_time } = req.body;
+    Booking.findById(req.user.current_booking_id, function (err, booking) {
+        booking.departure_date = departure_date
+        booking.arrival_date = arrival_date
+        booking.departure_day_time = departure_day_time
+        booking.arrival_day_time = arrival_day_time
+        booking.tickets = tickets
+
+        booking.save(function (err) {
+            if(err) {
+                console.log(err)
+            }
+            res.redirect('/pay')
+        })
+    })
+    
+})
+
+router.get('/booking-success', ensureAuthenticated, (req, res) => {
+    res.render('success')
 })
 
 router.get('/logout', (req, res, next) => {

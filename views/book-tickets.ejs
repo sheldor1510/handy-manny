@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/book-tickets.css" />
-    <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend Deca">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Handy Manny</title>
@@ -21,32 +21,37 @@
           <i style="font-size: 2rem;" class="fa fa-bars"></i>
         </a>
     </div>
-    <h1 id="main-header"><%- name %>, where would you like to go next ?</h1>
+    <b><h1 id="main-header"><%- name %>, where would you like to go next ?</h1></b>
     <p class="main-hint-text">book a ticket</p>
+    <button type="button" data-toggle="modal" data-target="#location1" class="choose-location">Choose Locations</button>
     <div class="container"> 
         <div class="box"> 
             <div class="box-row"> 
                 <div class="box-cell box1"> 
                     <p class="from">FROM</p>
-                    <h1 class="place">New Delhi</h1>
+                    <h1 class="place"><%= typeof from_location != 'undefined' ? from_location : 'New Delhi' %></h1>
                     <p class="location">samyapur badli</p>
                 </div> 
                 <div class="box-cell box2"> 
                     <p class="from">TO</p>
-                    <h1 class="place">Gurgaon</h1>
+                    <h1 class="place"><%= typeof to_location != 'undefined' ? to_location : 'Gurgaon' %></h1>
                     <p class="location">huda city centre, sector-29</p>
                 </div> 
             </div> 
         </div> 
     </div> 
     <img class="arrow-icon" src="https://cdn.discordapp.com/attachments/745141823210782720/746385989810782308/unknown.png">
+    <form method="POST" action="/book-tickets">
         <label class="radio-1">
-          <input type="radio" name="optradio">  One-way
+          <input type="radio" value="one-way" name="optradio">  One-way
         </label>
         <label class="radio-inline">
-          <input type="radio" name="optradio">  Round Trip
+          <input type="radio" value="round-trip" name="optradio">  Round Trip
         </label>
-          <a href="/select-dates"><button class="continue">Continue</button></a>
+        <input name="from_location" type="hidden" value="<%= typeof from_location != 'undefined' ? from_location : 'New Delhi' %>">
+        <input name="to_location" type="hidden" value="<%= typeof to_location != 'undefined' ? to_location : 'Gurgaon' %>">
+        <a href=""><button type="submit" class="continue">Continue</button></a>
+    </form>
     <table>
         <tr>
           <th>Estimated Travel Time</th>
@@ -61,6 +66,49 @@
           <td>4</td>
         </tr>
     </table>
+    <div class="modal fade" id="location1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div id="modal-body" class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" style="font-family: 'Lexend Deca'" id="exampleModalLabel"><b>From</b></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="POST" action="/choose-from">
+            <select name="From_Locations" id="dropdown-selector">
+              <option value="New Delhi">New Delhi</option>
+              <option value="Gurgaon">Gurgaon</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Chennai">Chennai</option>
+            </select>
+          </div>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" style="font-family: 'Lexend Deca'" id="exampleModalLabel"><b>To</b></h5>
+              </button>
+            </div>
+            <div class="modal-body">
+              <select name="To_Locations" id="dropdown-selector">
+              <option value="New Delhi">New Delhi</option>
+              <option value="Gurgaon">Gurgaon</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Chennai">Chennai</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="/js/navbar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>

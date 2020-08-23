@@ -29,6 +29,10 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    current_booking_id: {
+        type: String,
+        required: true
+    },
     date: {
         type: Date,
         default: Date.now
