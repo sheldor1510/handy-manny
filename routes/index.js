@@ -281,6 +281,7 @@ router.post('/select-dates', ensureAuthenticated, (req, res) => {
         booking.departure_day_time = departure_day_time
         booking.arrival_day_time = arrival_day_time
         booking.tickets = tickets
+        booking.status = 'complete'
 
         booking.save(function (err) {
             if(err) {
