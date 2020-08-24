@@ -53,6 +53,18 @@ const BookingSchema = new mongoose.Schema({
         type: Number,
         require: false,
     },
+    train_id: {
+        type: String,
+        required: false
+    },
+    eta: {
+        type: String,
+        required: false
+    },
+    expected_attendance: {
+        type: Number,
+        required: false
+    },
     date: {
         type: Date,
         default: Date.now

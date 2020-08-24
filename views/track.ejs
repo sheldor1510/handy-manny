@@ -23,29 +23,26 @@
     </div>
     <h1 id="main-header"><%- name %>, track any metro.</h1>
     <p class="main-hint-text">get live updates of a metro</p>
-    <div class="container"> 
-        <div class="box"> 
-            <div class="box-row"> 
-                <div class="box-cell box1"> 
-                    <p class="from">DEPARTURE</p>
-                    <h1 class="place">20 Aug</h1>
-                    <p class="location">Thursday, 9:30 AM</p>
-                </div> 
-                <div class="box-cell box2"> 
-                    <p class="from">RETURN</p>
-                    <h1 class="place">21 Aug</h1>
-                    <p class="location">Thursday, 9:30 PM</p>
-                </div> 
-            </div> 
-        </div> 
-    </div> 
-    <img class="arrow-icon" src="https://cdn.discordapp.com/attachments/745141823210782720/746385989810782308/unknown.png">
-    <a href="/dashboard"><button id="tickets-continue">Go back</button></a>
-    <p class="main-hint-text">live route</p>
-    <iframe frameborder="0" style="border:0"
-    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAqgRE9cHWPR1DNN5nQtEDbdCT9Q6JExXw
-    &q=Huda+City+Centre+Station" allowfullscreen>
-</iframe>
+    <form method="POST" action="/search">
+    <input id="train_id" placeholder="Metro ID" type="text" name="train_id" value="<%= typeof train_id != 'undefined' ? train_id : '' %>">
+    <button type="submit" id="search-button">Search</button>
+    </form>
+    <table>
+        <tr>
+            <th>ETA</th>
+            <th>Expected Attendance</th>
+            <th>Departure Station</th>
+            <th>Arrival Station</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td><%= typeof eta != 'undefined' ? eta : '1hr 20mins' %></td>
+            <td><%= typeof expected_attendance != 'undefined' ? expected_attendance : '70' %> people</td>
+            <td><%= typeof from_station_name != 'undefined' ? from_station_name : 'Station 1, Chennai' %></td>
+            <td><%= typeof to_station_name != 'undefined' ? to_station_name : 'Station 4, Gurgaon' %></td>
+            <td>On time</td>
+        </tr>
+    </table>
     <script src="/js/navbar.js"></script>
 </body>
 </html>

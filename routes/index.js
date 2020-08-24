@@ -8,10 +8,16 @@ const { ensureAuthenticated } = require('../config/auth');
 
 router.get('/', (req, res) => res.render('home'))
 
-router.get('/dashboard', ensureAuthenticated, (req, res) => 
-res.render('dashboard', {
-    name: req.user.name
-}))
+router.get('/dashboard', ensureAuthenticated, (req, res) => {
+    Booking.find({'user_id': req.user.id }, function(err, bookings) {
+        res.render('dashboard', {
+            name: req.user.name,
+            bookings: bookings
+        })
+    })
+    
+})
+
 
 router.get('/book-tickets', ensureAuthenticated, (req, res) => 
 res.render('book-tickets', {
@@ -286,6 +292,15 @@ router.post('/book-tickets', ensureAuthenticated, (req, res) => {
     res.redirect('/select-dates')
 })
 
+function randomStr(len, arr) { 
+    var ans = ''; 
+    for (var i = len; i > 0; i--) { 
+        ans +=  
+          arr[Math.floor(Math.random() * arr.length)]; 
+    } 
+    return ans; 
+} 
+
 router.post('/select-dates', ensureAuthenticated, (req, res) => {
     const { tickets, departure_date, arrival_date, departure_day_time, arrival_day_time } = req.body;
     Booking.findById(req.user.current_booking_id, function (err, booking) {
@@ -296,6 +311,9 @@ router.post('/select-dates', ensureAuthenticated, (req, res) => {
         booking.tickets = tickets
         booking.status = 'complete'
         booking.booking_amount = tickets * 20
+        booking.train_id = randomStr(5, '12345abcde')
+        booking.eta = '2hr 45mins'
+        booking.expected_attendance = 90 
         booking.save(function (err) {
             if(err) {
                 console.log(err)
@@ -308,6 +326,19 @@ router.post('/select-dates', ensureAuthenticated, (req, res) => {
 
 router.get('/booking-success', ensureAuthenticated, (req, res) => {
     res.render('success')
+})
+
+router.post('/search', ensureAuthenticated, (req, res) => {
+    const { train_id } = req.body;
+    Booking.find({'train_id': train_id }, function(err, booking) {
+        res.render('track', {
+            name: req.user.name,
+            eta: booking.eta,
+            expected_attendance: booking.expected_attendance,
+            from_station_name: booking.from_station_name,
+            to_station_name: booking.to_station_name
+        })
+    })
 })
 
 router.get('/logout', (req, res, next) => {

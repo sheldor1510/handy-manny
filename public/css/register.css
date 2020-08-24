@@ -4,8 +4,8 @@
   }
 
 body {
-    overflow:hidden;
     background-color: #FAFBFF;
+    overflow: hidden;
 }
 
 #err_message {
@@ -53,7 +53,7 @@ body {
 }
 
 .content button {
-    margin-left: 96rem;
+    margin-left: 64rem;
     margin-top: 2rem;
     height: 35px;
     width: 100px;
@@ -64,14 +64,8 @@ body {
     font-size: 1rem;
 }
 
-.content form {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-}
-
 #sp {
-    margin-left: 64rem;
+    margin-left: 38rem;
     margin-top: -2rem;
 }
 
@@ -87,15 +81,20 @@ body {
     font-size: 1.8rem;
 }
 
+#rand-div {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
 #city-input {
-    width: 300px;
-    margin-right:0rem;
+    width: 270px;
+    margin-left:64rem;
 }
 
 #state-input {
-    width: 300px;
-    margin-left: 83.5rem;
-    margin-top: -4rem!important;
+    width: 270px;
+    margin-left: 30px;
 }
 
 @media only screen and (max-width: 1600px) {

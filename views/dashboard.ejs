@@ -24,18 +24,19 @@
     <h1 id="main-header">Namaste, <%- name %>.</h1>
     <p class="main-hint-text">scheduled metro(s)</p>
     <div class="big-div">
-        <div class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para">From Samyapur Badli Metro Station <br> To Huda City Centre Metro Station</p><p class="train-hint-text">Departure at Thursday, 9:00 AM<br>Return at Thursday, 9:30 PM </p></div>
-        <div id="second-div" class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para">From Samyapur Badli Metro Station <br> To Huda City Centre Metro Station</p><p class="train-hint-text">Departure at Thursday, 9:00 AM<br>Return at Thursday, 9:30 PM </p></div>
+        <% for (let i = 0; i < bookings.length; i++) { %>
+            <div class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para">From <%- bookings[i].from_station_name %> <br> To <%- bookings[i].to_station_name %></p><p class="train-hint-text">Departure at <%- bookings[i].departure_day_time %><br>Return at <%- bookings[i].arrival_day_time %> </p><p class="train-hint-text">Train ID: <span style="color: black"><%- bookings[i].train_id %></span></p></div>
+        <% } %>
     </div>
     <p class="main-hint-text">travel history</p>
     <div class="big-div">
-        <div class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para" class="responsive" >From Samyapur Badli Metro Station <br> To Huda City Centre Metro Station</p><p class="train-hint-text">Departure at Thursday, 9:00 AM<br>Return at Thursday, 9:30 PM </p></div>
-        <div id="second-div" class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para">From Samyapur Badli Metro Station <br> To Huda City Centre Metro Station</p><p class="train-hint-text">Departure at Thursday, 9:00 AM<br>Return at Thursday, 9:30 PM </p></div>
+        <div class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para" class="responsive" >From Station 3, Mumbai <br> To Station 5, Gurgaon</p><p class="train-hint-text">Departure at Thursday, 9:00 AM<br>Return at Thursday, 9:30 PM </p><p class="train-hint-text">Train ID: <span style="color: black">ngl32</span></p></div>
+        <div class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para">From Station 3, Mumbai <br> To Station 5, Gurgaon</p><p class="train-hint-text">Departure at Thursday, 9:00 AM<br>Return at Thursday, 9:30 PM </p><p class="train-hint-text">Train ID: <span style="color: black">d3d42</span></p></div>
     </div>
     <p class="main-hint-text">deals and offers</p>
     <div class="big-div">
-        <div class="train-div"><img style="padding-top: 1%;" src="https://cdn.discordapp.com/attachments/733943303493386282/746454327174103112/unknown.png" id="train-icon"></img><p id="train-para">20% off for using HDFC<br>Mastercard</p><p class="train-hint-text">This deal is only valid till 2nd September. You'll<br>regret not taking advantage of it.</p></div>
-        <div id="second-div" class="train-div"><img style="padding-top: 1%;" src="https://cdn.discordapp.com/attachments/733943303493386282/746454327174103112/unknown.png" id="train-icon"></img><p id="train-para">20% off for using HDFC<br>Mastercard</p><p class="train-hint-text">This deal is only valid till 2nd September. You'll<br>regret not taking advantage of it.</p></div>
+        <div class="deal-div"><img style="padding-top: 1%;" src="https://cdn.discordapp.com/attachments/733943303493386282/746454327174103112/unknown.png" id="train-icon"></img><p id="deal-para">20% off for using HDFC<br>Mastercard</p><p class="deal-hint-text">This deal is only valid till 2nd September. You'll regret not taking advantage of it.</div>
+        <div class="deal-div"><img style="padding-top: 1%;" src="https://cdn.discordapp.com/attachments/733943303493386282/746454327174103112/unknown.png" id="train-icon"></img><p id="deal-para">20% off for using HDFC<br>Mastercard</p><p class="deal-hint-text">This deal is only valid till 2nd September. You'll regret not taking advantage of it.</div>
     </div>
     <br><br><br>
     <script src="/js/navbar.js"></script>

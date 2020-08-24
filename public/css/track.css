@@ -52,7 +52,7 @@
 
 .container .box { 
   height: 300px;
-  width: 130%;
+  width: 100%;
   margin-left: -160px;
   background-color: white;
   border-radius: 15px;
@@ -64,7 +64,7 @@
 } 
 .container .box .box-cell { 
   display:table-cell; 
-  width:50%; 
+  width:10%; 
   padding:10px; 
   padding-left: 50px;
   padding-top: 30px;
@@ -129,25 +129,12 @@
   margin-top: 1rem;
 }
 
-#tickets-continue {
-  height: 35px;
-  width: 100px;
-  font-family: 'Lexend Deca';
-  color: white;
-  background-color: #3C4CEA;
-  border-radius: 7px;
-  font-size: 1rem;
-  border: none;
-  margin-left: 100rem;
-  margin-top: -1rem;
-}
-
 table, th, td {
   border: 1px solid black;
 }
 
 th {
-  font-weight: normal;
+  font-weight: bolder;
 }
 
 table {
@@ -159,8 +146,14 @@ table {
   text-align: center;
 }
 
-th, td {
+th {
   padding: 15px;
+  color: #3C4CEA;
+}
+
+td {
+  padding: 15px;
+  color: black;
 }
 
 #tickets-input {
@@ -174,13 +167,6 @@ th, td {
   margin-top: -20rem;
 }
 
-iframe {
-    padding-left: 250px;
-    width: 80%;
-    height: 800px;
-    margin-bottom: 4rem;
-}
-
 #tickets-confirmed {
   height: 35px;
   width: 100px;
@@ -192,6 +178,39 @@ iframe {
   border: none;
   margin-left: 250px;
   margin-top: 2rem;
+}
+
+#map {
+  margin-left: 250px;
+  width: 80%;
+  height: 800px;
+  margin-bottom: 4rem;
+}
+
+#train_id {
+  margin-left: 250px;
+  height: 50px;
+  border-radius: 15px;
+  font-family: 'Lexend Deca';
+  font-size: 1.4rem;
+  text-align: left;
+  border-width: 1px;
+  border-color: black;
+  width: 400px;
+  padding-left: 20px;
+  margin-bottom: 2rem;
+}
+
+#search-button {
+  height: 35px;
+  width: 100px;
+  font-family: 'Lexend Deca';
+  color: white;
+  background-color: #3C4CEA;
+  border-radius: 7px;
+  font-size: 1rem;
+  border: none;
+  margin-left: 10px;
 }
 
 @media screen and (max-width: 2500px) {
@@ -222,6 +241,9 @@ iframe {
     height: 100px;
     width: 100%;
     margin-left: -10px;
+  }
+  #train_id {
+    margin-left: 200px;
   }
   table {
     width: 73%;

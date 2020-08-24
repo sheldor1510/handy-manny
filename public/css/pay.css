@@ -1,6 +1,10 @@
 .topnav {
     background-color: #3C4CEA;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }
   
 #navbar-title {
@@ -10,6 +14,7 @@
   text-decoration: none;
   color: white;
   background-color: #3C4CEA;
+  z-index: 2;
 }
 
 .topnav a {
@@ -21,16 +26,19 @@
     text-decoration: none;
     font-size: 1.4rem;
     font-family: 'Lexend Deca';
+    z-index: 2;
 }
 
 .topnav a:hover {
     color: #3C4CEA;
     background-color: white;
     text-decoration: none;
+    z-index: 2;
 }
 
 .topnav .icon {
     display: none;
+    z-index: 2;
 }
 
 #main-header {
@@ -51,13 +59,14 @@
 }
 
 .pay-div {
-    height: 93vh;
+    height: 110vh;
     width: 606px;
     margin-left: 68%;
     overflow: hidden;
     background-color: lavender;
-    margin-top: -17.2rem;
+    margin-top: -20rem;
     padding-left: 80px;
+    z-index: 1;
 }
  
 #train-icon {
@@ -92,7 +101,7 @@
 .train-div {
     height: 170px;
     width: 45%;
-    margin-top: -40rem;
+    margin-top: -50rem;
     background-color: white;
     margin-left: 180px;
 }
@@ -100,7 +109,7 @@
 .pay-div h1 {
     font-family: 'Lexend Deca';
     font-size: 1.7rem;
-    margin-top: 80px;
+    margin-top: 150px;
 }
 
 .radio-toolbar {
@@ -241,7 +250,7 @@ label {
         margin-top: -16.8rem;
     }
     .pay-div h1 {
-        margin-top: 50px;
+        margin-top: 100px;
     }
     .card-input {
         width: 300px;
