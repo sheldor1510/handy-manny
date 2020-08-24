@@ -43,7 +43,7 @@
     <!-- <img class="arrow-icon" src="https://cdn.discordapp.com/attachments/745141823210782720/746385989810782308/unknown.png"> -->
     <form method="POST" action="/select-dates">
         <label class="radio-inline">
-          <input required id="tickets-input" type="tel" name="tickets">  Tickets
+          <input required id="tickets-input" type="number" min="1" max="4" name="tickets">  Tickets
         </label>
         <input name="departure_date" type="hidden" value="<%= typeof departure_date != 'undefined' ? departure_date : '20 Aug' %>">
         <input name="departure_day_time" type="hidden" value="<%= typeof departure_day_time != 'undefined' ? departure_day_time : 'Thursday, 9:30 PM' %>">

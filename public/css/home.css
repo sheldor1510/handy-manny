@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 4;
+    z-index: 12;
 }
   
 #navbar-title {
@@ -40,7 +40,7 @@
 #main-header {
   font-family: 'Lexend Deca';
   font-size: 8rem;
-  padding-top: 28vh;
+  padding-top: 17rem;
   color: black;
   text-align: center;
 }
@@ -54,10 +54,9 @@
 }
 
 .video-play-button {
-  position: absolute;
   z-index: 10;
-  top: 50%;
-  left: 50%;
+  margin-top: 2rem;
+  margin-left: 58.6rem;
   transform: translateX(-50%) translateY(-50%);
   box-sizing: content-box;
   display: block;
@@ -130,11 +129,6 @@
     transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
     opacity: 0;
   }
-}
-
-#play-video {
-  margin-top: 13vh;
-  margin-left: -1rem;
 }
 
 .home-heading {
@@ -242,6 +236,11 @@ iframe {
     font-size: 4.6rem;
     color: gray;
   }
+
+  .video-play-button {
+    margin-left: 47rem;
+  }
+
   .home-heading {
     font-size: 3rem;
   }

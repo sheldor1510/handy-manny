@@ -30,12 +30,12 @@
                 <div class="box-cell box1"> 
                     <p class="from">FROM</p>
                     <h1 class="place"><%= typeof from_location != 'undefined' ? from_location : 'New Delhi' %></h1>
-                    <p class="location">samyapur badli</p>
+                    <p class="location"><%= typeof from_station_name != 'undefined' ? from_station_name : 'Station 1, New Delhi' %></p>
                 </div> 
                 <div class="box-cell box2"> 
                     <p class="from">TO</p>
                     <h1 class="place"><%= typeof to_location != 'undefined' ? to_location : 'Gurgaon' %></h1>
-                    <p class="location">huda city centre, sector-29</p>
+                    <p class="location"><%= typeof to_station_name != 'undefined' ? to_station_name : 'Station 5, Gurgaon' %></p>
                 </div> 
             </div> 
         </div> 
@@ -50,6 +50,8 @@
         </label>
         <input name="from_location" type="hidden" value="<%= typeof from_location != 'undefined' ? from_location : 'New Delhi' %>">
         <input name="to_location" type="hidden" value="<%= typeof to_location != 'undefined' ? to_location : 'Gurgaon' %>">
+        <input name="from_station_name" type="hidden" value="<%= typeof from_station_name != 'undefined' ? from_station_name : 'Station 1, New Delhi' %>">
+        <input name="to_station_name" type="hidden" value="<%= typeof to_station_name != 'undefined' ? to_station_name : 'Station 5, Gurgaon' %>">
         <a href=""><button type="submit" class="continue">Continue</button></a>
     </form>
     <table>
@@ -83,6 +85,14 @@
               <option value="Mumbai">Mumbai</option>
               <option value="Chennai">Chennai</option>
             </select>
+            <br><br>
+            <select name="From_Station" id="dropdown-selector">
+              <option value="Station 1">Station 1</option>
+              <option value="Station 2">Station 2</option>
+              <option value="Station 3">Station 3</option>
+              <option value="Station 4">Station 4</option>
+              <option value="Station 5">Station 5</option>
+            </select>
           </div>
           <div class="modal-content">
             <div class="modal-header">
@@ -95,6 +105,14 @@
               <option value="Gurgaon">Gurgaon</option>
               <option value="Mumbai">Mumbai</option>
               <option value="Chennai">Chennai</option>
+              </select>
+              <br><br>
+              <select name="To_Station" id="dropdown-selector">
+                <option value="Station 1">Station 1</option>
+                <option value="Station 2">Station 2</option>
+                <option value="Station 3">Station 3</option>
+                <option value="Station 4">Station 4</option>
+                <option value="Station 5">Station 5</option>
               </select>
             </div>
           </div>

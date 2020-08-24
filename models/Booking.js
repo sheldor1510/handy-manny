@@ -13,6 +13,14 @@ const BookingSchema = new mongoose.Schema({
         type: String,
         required: false
     },
+    from_station_name: {
+        type: String,
+        required: false
+    },
+    to_station_name: {
+        type: String,
+        required: false
+    },
     type: {
         type: String,
         required: false

@@ -154,9 +154,18 @@ router.get('/select-dates', ensureAuthenticated, (req, res) => res.render('selec
     name: req.user.name
 }))
 
-router.get('/pay', ensureAuthenticated, (req, res) => res.render('pay', {
-    name: req.user.name
-}))
+router.get('/pay', ensureAuthenticated, (req, res) => {
+    Booking.findById(req.user.current_booking_id, function (err, booking) {
+        res.render('pay', {
+            name: req.user.name,
+            amount: booking.booking_amount,
+            from_station_name: booking.from_station_name,
+            to_station_name: booking.to_station_name,
+            departure_day_time: booking.departure_day_time,
+            arrival_day_time: booking.arrival_day_time
+        })
+    })
+})
 
 router.get('/track', ensureAuthenticated, (req, res) => res.render('track', {
     name: req.user.name
@@ -222,11 +231,13 @@ router.post('/change-password', ensureAuthenticated, (req, res) => {
 })
 
 router.post('/choose-from', ensureAuthenticated, (req, res) => {
-    const { From_Locations, To_Locations } = req.body;
+    const { From_Locations, To_Locations, From_Station, To_Station } = req.body;
     res.render('book-tickets', {
         name: req.user.name,
         from_location: From_Locations,
-        to_location: To_Locations
+        to_location: To_Locations,
+        from_station_name: From_Station + ', ' + From_Locations,
+        to_station_name: To_Station + ', ' + To_Locations,
     })
 })
 
@@ -242,13 +253,15 @@ router.post('/choose-dates', ensureAuthenticated, (req, res) => {
 })
 
 router.post('/book-tickets', ensureAuthenticated, (req, res) => {
-    const { from_location, to_location, optradio } = req.body;
+    const { from_location, to_location, optradio, from_station_name, to_station_name } = req.body;
     const newBooking = new Booking({
         user_id: req.user.id,
         from_location,
         to_location,
         type: optradio,
         status: 'incomplete',
+        from_station_name,
+        to_station_name
     })
     newBooking.save()
         .then(booking => {
@@ -282,7 +295,7 @@ router.post('/select-dates', ensureAuthenticated, (req, res) => {
         booking.arrival_day_time = arrival_day_time
         booking.tickets = tickets
         booking.status = 'complete'
-
+        booking.booking_amount = tickets * 20
         booking.save(function (err) {
             if(err) {
                 console.log(err)
