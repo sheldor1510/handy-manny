@@ -12,6 +12,20 @@
   background-color: #3C4CEA;
 }
 
+#err_message {
+  color: red;
+  font-family: 'Lexend Deca';
+  padding-left: 250px;
+  font-size: 1.4rem;
+}
+
+#succ_message {
+  color: green;
+  font-family: 'Lexend Deca';
+  padding-left: 250px;
+  font-size: 1.4rem;
+}
+
 .topnav a {
     float: left;
     display: block;
@@ -53,6 +67,10 @@
 #train-icon {
   font-size: 4rem; 
   padding-left: 5%;
+}
+
+#deal-icon {
+  font-size: 4rem; 
 }
 
 #train-para {

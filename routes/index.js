@@ -334,6 +334,11 @@ router.get('/booking-success', ensureAuthenticated, (req, res) => {
     res.render('success')
 })
 
+router.post('/booking-success', ensureAuthenticated, (req, res) => {
+    req.flash('success_msg', 'Your booking was confirmed');
+    res.redirect('/dashboard')
+})
+
 router.post('/search', ensureAuthenticated, (req, res) => {
     const { train_id } = req.body;
     Booking.find({'train_id': train_id }, function(err, booking) {

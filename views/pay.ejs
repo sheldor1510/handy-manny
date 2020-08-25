@@ -25,7 +25,7 @@
     <p class="main-hint-text">book a ticket</p>
     <div class="pay-div">
         <h1>Payment Method</h1>
-        <form method="GET" action="/booking-success">
+        <form method="POST" action="/booking-success">
         <div class="radio-toolbar">
             <input type="radio" id="radio1" name="radios" value="all" checked>
             <label for="radio1">Credit Card</label>
@@ -52,7 +52,7 @@
         <input required maxlength="3" type="password" style="margin-left: 3.8rem;" class="card-input-half"><br>
         <input type="checkbox" id="save-card">
         <label>&nbsp;&nbsp;Save this card for future purchases</label>
-        <a style="text-decoration: none;" href="/booking-success"><button type="submit" id="confirm">Confirm Order</button></a>
+        <button type="submit" id="confirm">Confirm Order</button>
     </form>
     </div>
     </div>

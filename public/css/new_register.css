@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'Airbnb';
+    src: URL('../fonts/AirbnbCerealExtraBold.ttf') format('truetype');
+  }
+
+body {
+    background-color: #FAFBFF;
+}
+
+#err_message {
+    color: red;
+}
+
+#succ_message {
+    color: green;
+}
+
+.content h1 {
+    font-family: 'Airbnb';
+    font-size: 2.5rem;
+    display: block;
+    margin: auto;
+    text-align: left;
+    margin-top: -64rem;
+    margin-left: 64rem;
+}
+
+.content p {
+    font-family: 'Lexend Deca';
+    font-size: 1.4rem;
+    display: block;
+    margin: auto;
+    text-align: left;
+    margin-top: 0.4rem;
+    margin-left: 64rem;
+    color: gray;
+}
+
+.content input {
+    height: 60px;    
+    margin-top: 2rem;
+    border-color: gray;
+    border-radius: 15px;
+    font-family: 'Lexend Deca';
+    font-size: 1.7rem;
+    text-align: left;
+    margin-left: 64rem;
+    border-width: 1px;
+    border-color: gray;
+    width: 600px;
+    padding-left: 20px;
+}
+
+.content button {
+    margin-left: 64rem;
+    margin-top: 2rem;
+    height: 35px;
+    width: 100px;
+    font-family: 'Lexend Deca';
+    color: white;
+    background-color: royalblue;
+    border-radius: 7px;
+    font-size: 1rem;
+}
+
+#sp {
+    margin-left: 93rem;
+    margin-top: -2rem;
+}
+
+.side-img {
+    margin-left: -2rem;
+    margin-top: -8rem;
+}
+
+#bottom-text {
+    margin-top: 4rem;
+    margin-right: 100rem;
+    color:white;
+    font-size: 1.8rem;
+}
+
+#rand-div {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: left;
+}
+
+#city-input {
+    width: 270px;
+    margin-left:64rem;
+}
+
+#state-input {
+    width: 270px;
+    margin-left: 30px;
+}
+
+@media only screen and (max-width: 1600px) {
+    .side-img {
+        margin-left: -12rem;
+        margin-top: -8rem;
+    }
+    .content h1 {
+        margin-top: -68rem;
+        margin-left: 40rem;
+    }
+    .content p {
+        margin-left: 40rem;
+    }
+    .content input {
+        margin-left: 40rem;
+        height: 50px;
+        font-size: 1.5rem;
+        width: 480px;
+    }
+    .content button {
+        margin-left: 71rem;
+    }
+    #sp {
+        margin-left: 47rem;
+    }
+    #bottom-text {
+        margin-top: -1rem;
+        margin-right: 71rem;
+    }
+    #city-input {
+        width: 240px;
+        margin-right:0rem;
+    }
+    #state-input {
+        width: 240px;
+        margin-left: 62.3rem;
+        margin-top: -3.2rem!important;
+    }
+  }
+
+@media only screen and (max-width: 1000px) {
+    .side-img {
+        margin-left: -50rem;
+        margin-top: -8rem;
+    }
+    .content h1 {
+        margin-top: -60rem;
+        margin-right: 0rem;
+        font-size: 2rem;
+    }
+    .content p {
+        margin-right: 0rem;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .content input {
+        display: block;
+        margin: auto;
+        margin-bottom: 1.5rem;
+        height: 30px;
+        font-size: 1rem;
+        width: 70%;
+    }
+    .content button {
+        display: block;
+        margin: auto;
+    }
+    #sp {
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    #bottom-text {
+        margin-top: 10rem;
+        margin-right: 60rem;
+    }
+  }
