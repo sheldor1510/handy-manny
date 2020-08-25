@@ -194,6 +194,7 @@ router.get('/account', ensureAuthenticated, (req, res) => {
 
 router.get('/change-password', ensureAuthenticated, (req, res) => res.render('account', {
     name: req.user.name,
+    prof_name: req.user.name.toUpperCase(),
     show_cp: 'show'
 }))
 
