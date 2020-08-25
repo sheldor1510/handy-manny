@@ -157,7 +157,7 @@
   }
   .train-div {
     height: 170px;
-    width: 40%;
+    width: 45%;
     border-style: solid;
     border-color: black;
     border-width: 1px;
@@ -167,7 +167,7 @@
     margin-right: 30px;
   }
   .deal-div {
-    width: 40%;
+    width: 45%;
   }
   #train-icon {
     font-size: 2rem; 
