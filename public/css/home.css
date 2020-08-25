@@ -55,8 +55,9 @@
 
 .video-play-button {
   z-index: 10;
+  display: block;
+  margin: auto;
   margin-top: 2rem;
-  margin-left: 58.6rem;
   transform: translateX(-50%) translateY(-50%);
   box-sizing: content-box;
   display: block;
@@ -226,26 +227,25 @@ iframe {
     font-size: 6.6rem;
     padding-top: 28vh;
     color: black;
-    text-align: center;
+    display: block;
+    margin: auto;
+    padding-top: 28vh;
   }
   
   .main-hint-text {
     font-family: 'Lexend Deca';
-    text-align: center;
+    display: block;
+    margin: auto;
     margin-top: -1rem;
     font-size: 4.6rem;
     color: gray;
-  }
-
-  .video-play-button {
-    margin-left: 47rem;
   }
 
   .home-heading {
     font-size: 3rem;
   }
   .home-para {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
   iframe {
     height: 500px;
