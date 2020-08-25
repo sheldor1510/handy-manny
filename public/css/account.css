@@ -62,16 +62,17 @@
     align-items: center;
     margin-left: 250px;
     margin-top: 5rem;
-    height: 70vh;
+    height: 90vh;
     width: 65%;
     border-style: solid;
     border-color: gray;
     border-width: 1px;
+    margin-bottom: 5rem;
 }
 
 .menu-div {
     width: 25%;
-    height: 70vh;
+    height: 90vh;
     border-style: solid;
     border-color: gray;
     border-width: 1px;
@@ -80,7 +81,7 @@
 
 .action-div {
     width: 75%;
-    height: 70vh;
+    height: 90vh;
     border-style: solid;
     border-color: gray;
     border-width: 1px;
@@ -207,18 +208,18 @@
 
 @media screen and (max-width: 1600px) {
     .bigger-div {
-        height: 80vh;
+        height: 90vh;
         width: 75%;
         margin-bottom: 5rem;
     }
     .menu-div {
         width: 25%;
-        height: 80vh;
+        height: 90vh;
     }
     
     .action-div {
         width: 75%;
-        height: 80vh;
+        height: 90vh;
     }
     .menu-item1 {
         height: 7vh;

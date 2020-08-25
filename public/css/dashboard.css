@@ -156,8 +156,15 @@
     padding-left: 200px;
   }
   .train-div {
+    height: 170px;
     width: 40%;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    background-color: white;
     border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 30px;
   }
   .deal-div {
     width: 40%;
@@ -167,10 +174,10 @@
   }
   #train-para {
       font-size: 1rem;
-      padding-left: 40%;
+      padding-left: 50%;
   }
   .train-hint-text {
-      padding-left: 40%;
+      padding-left: 50%;
   }
   #main-header {
     padding-left: 200px;
