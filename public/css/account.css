@@ -161,6 +161,7 @@
     font-family: 'Lexend Deca';
     color: white;
     background-color: royalblue;
+    border: none;
     border-radius: 7px;
     font-size: 1.3rem;
     margin-left: 420px;
@@ -177,6 +178,7 @@
 #new_pass_button {
     width: 230px;
     margin-left: 370px;
+    border: none;
 }
 
 #new_pass_p {
