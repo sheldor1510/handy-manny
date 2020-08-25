@@ -24,6 +24,9 @@
     <h1 id="main-header">Namaste, <%- name %>.</h1>
     <p class="main-hint-text">scheduled metro(s)</p>
     <div class="big-div">
+        <% if(bookings.length == 0) { %> 
+            <div class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para" class="responsive" >None</p><p class="train-hint-text"></p><p class="train-hint-text"><span style="color: black"></span></p></div>  
+        <% } %>
         <% for (let i = 0; i < bookings.length; i++) { %>
             <div class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para">From <%- bookings[i].from_station_name %> <br> To <%- bookings[i].to_station_name %></p><p class="train-hint-text">Departure at <%- bookings[i].departure_day_time %><br>Return at <%- bookings[i].arrival_day_time %> </p><p class="train-hint-text">Train ID: <span style="color: black"><%- bookings[i].train_id %></span></p></div>
         <% } %>

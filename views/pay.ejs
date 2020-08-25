@@ -25,6 +25,7 @@
     <p class="main-hint-text">book a ticket</p>
     <div class="pay-div">
         <h1>Payment Method</h1>
+        <form method="GET" action="/booking-success">
         <div class="radio-toolbar">
             <input type="radio" id="radio1" name="radios" value="all" checked>
             <label for="radio1">Credit Card</label>
@@ -36,22 +37,24 @@
             <label for="radio3">Apple Pay</label>
         </div>
         <h1 style="margin-top: 2rem;margin-bottom: 1.5rem;">Choose Card</h1>
-        <input type="radio" id="saved">
+        <input type="radio" id="saved" name="f" checked value="all">
         <label>&nbsp;&nbsp;VISA</label><br>
-        <input type="radio" id="saved">
+        <input type="radio" id="saved" name="f" value="false">
         <label>&nbsp;&nbsp;Mastercard</label><br>
-        <input type="radio" id="saved">
+        <input type="radio" id="saved" name="f" value="true">
         <label>&nbsp;&nbsp;Add New Card</label><br>
         <h1 id="card-deets">Name on Card</h1>
-        <input class="card-input">
+        <input required class="card-input">
         <h1 id="card-deets">Card Number</h1>
-        <input class="card-input">
+        <input required class="card-input">
         <h1 id="card-deets">Exp Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CVV</h1>
-        <input placeholder="MM / YY" class="card-input-half">
-        <input type="password" style="margin-left: 3.8rem;" class="card-input-half"><br>
+        <input required placeholder="MM / YY" class="card-input-half">
+        <input required maxlength="3" type="password" style="margin-left: 3.8rem;" class="card-input-half"><br>
         <input type="checkbox" id="save-card">
         <label>&nbsp;&nbsp;Save this card for future purchases</label>
-        <a style="text-decoration: none;" href="/booking-success"><button id="confirm">Confirm Order</button></a>
+        <a style="text-decoration: none;" href="/booking-success"><button type="submit" id="confirm">Confirm Order</button></a>
+    </form>
+    </div>
     </div>
     <div class="train-div"><img src="https://cdn.discordapp.com/attachments/733943303493386282/745699770441531503/unknown.png" id="train-icon"></img><p id="train-para">From <%- from_station_name %> <br> To <%- to_station_name %></p><p class="train-hint-text">Departure at <%- departure_day_time %><br>Return at <%- arrival_day_time %> </p><p class="train-fees"><b>$<%- amount %></b></p></div>
     <script src="/js/navbar.js"></script>
