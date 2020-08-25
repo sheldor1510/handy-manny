@@ -98,7 +98,7 @@
     margin-top:10%;
     font-family: 'Lexend Deca';
     font-size: 1.3rem;
-    padding-left: 22%;
+    text-align: center;
     padding-top: 5px;
 }
 
@@ -113,21 +113,22 @@
     border-top-width: 0px;
     font-family: 'Lexend Deca';
     font-size: 1.3rem;
-    padding-left: 20%;
+    text-align: center;
     padding-top: 5px;
 }
 
 .prof-img {
     display: block;
     margin: auto;
-    padding-top: 0%;
-    height: 300px;
-    width: 300px;
+    margin-top: 5%;
+    height:200px;
+    width: 200px;
+    border-radius: 50%;
 }
 
 .prof-name {
     text-align: center;
-    margin-top: -2rem;
+    margin-top: 1rem;
     font-family: 'Lexend Deca';
     font-size: 2rem;
 }
@@ -230,7 +231,7 @@
         margin-top:10%;
         font-family: 'Lexend Deca';
         font-size: 1.4rem;
-        padding-left: 5%;
+        text-align: center;
     }
     
     .menu-item2 {
@@ -244,6 +245,6 @@
         border-top-width: 0px;
         font-family: 'Lexend Deca';
         font-size: 1.4rem;
-        padding-left: 5%;
+        text-align: center;
     }
 }

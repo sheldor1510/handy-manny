@@ -177,15 +177,20 @@ router.get('/track', ensureAuthenticated, (req, res) => res.render('track', {
     name: req.user.name
 }))
 
-router.get('/account', ensureAuthenticated, (req, res) => res.render('account', {
-    name: req.user.name,
-    email: req.user.email,
-    age: req.user.age,
-    gender: req.user.gender,
-    city: req.user.city,
-    state: req.user.state,
-    show_cp: ''
-}))
+router.get('/account', ensureAuthenticated, (req, res) => {
+    let name = req.user.name
+    let captital_name = name.toUpperCase()
+    res.render('account', {
+        name: req.user.name,
+        prof_name: captital_name,
+        email: req.user.email,
+        age: req.user.age,
+        gender: req.user.gender,
+        city: req.user.city,
+        state: req.user.state,
+        show_cp: ''
+    })
+})
 
 router.get('/change-password', ensureAuthenticated, (req, res) => res.render('account', {
     name: req.user.name,
