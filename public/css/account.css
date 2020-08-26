@@ -5,17 +5,15 @@
 
 
 ::-webkit-scrollbar {
-  width: 15px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: white;
-  border-radius: 10px;
+    background: white;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3C4CEA;
-  border-radius: 10px;
+    background: #3C4CEA;
 }
 
 #err_message {

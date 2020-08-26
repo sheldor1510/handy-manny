@@ -9,17 +9,15 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 5px;
   }
   
 ::-webkit-scrollbar-track {
     background: white;
-    border-radius: 10px;
 }
-
+  
 ::-webkit-scrollbar-thumb {
     background: #3C4CEA;
-    border-radius: 10px;
 }
 
 #err_message {
