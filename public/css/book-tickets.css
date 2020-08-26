@@ -69,7 +69,6 @@
   margin-left: -160px;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 7px 7px 7px 7px whitesmoke;
   display: table;
 } 
 .container .box .box-row { 
@@ -260,7 +259,7 @@ th, td {
   .container .box { 
     height: 100px;
     width: 100%;
-    margin-left: -10px;
+    margin-left: 30px;
   }
   table {
     width: 73%;

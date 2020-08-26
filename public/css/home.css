@@ -56,6 +56,7 @@
   padding-top: 17rem;
   color: black;
   text-align: center;
+  padding-bottom: 1.5rem;
 }
 
 .main-hint-text {
@@ -64,6 +65,7 @@
   margin-top: -1rem;
   font-size: 5rem;
   color: gray;
+  padding-bottom: 1.5rem;
 }
 
 .video-play-button {
@@ -91,7 +93,7 @@
   display: block;
   width: 80px;
   height: 80px;
-  background: #ba1f24;
+  background: #3C4CEA;
   border-radius: 50%;
   animation: pulse-border 1500ms ease-out infinite;
 }
@@ -106,13 +108,13 @@
   display: block;
   width: 80px;
   height: 80px;
-  background: #fa183d;
+  background: #3C4CEA;
   border-radius: 50%;
   transition: all 200ms;
 }
 
 .video-play-button:hover:after {
-  background-color: darken(#fa183d, 10%);
+  background-color: darken(#3C4CEA, 10%);
 }
 
 .video-play-button img {
