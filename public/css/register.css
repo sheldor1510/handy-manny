@@ -131,20 +131,19 @@ body {
         margin-left: 71rem;
     }
     #sp {
-        margin-left: 47rem;
+        margin-left: -20rem;
     }
     #bottom-text {
-        margin-top: -1rem;
+        margin-top: -3rem;
         margin-right: 71rem;
     }
     #city-input {
-        width: 240px;
-        margin-left:64rem;
+        width: 225px;
+        margin-left:47rem;
     }
     #state-input {
-        width: 240px;
-        margin-left: 30px;
-        margin-top: -3.2rem!important;
+        width: 225px;
+        margin-left: 10px;
     }
   }
 
