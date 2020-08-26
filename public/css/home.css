@@ -187,17 +187,15 @@
 }
 
 #route-small-img {
-  border-radius: 10px;
-  margin-right: 1rem;
+  border-radius: 15px;
   margin-bottom: 1rem;
-  border-style: solid;
-  border-color: black;
-  border-width: 2px;
-  width: 600px;
-  height: 450px;
+  width: 900px;
+  height: 550px;
   display: block;
   margin: auto;
   margin-bottom: 10rem;
+  border-style: none;
+  border: none;
 }
 
 iframe {

@@ -95,7 +95,7 @@
 .place {
   font-family: 'Lexend Deca';
   font-weight: 900;
-  font-size: 7rem;
+  font-size: 5rem;
   color: #3C4CEA;
 }
 
@@ -274,7 +274,7 @@ th, td {
     margin-bottom: 2rem;
   }
   .place {
-    font-size: 6rem;
+    font-size: 4rem;
   }
   .radio-1 {
     margin-left: 13rem;

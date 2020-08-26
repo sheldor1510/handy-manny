@@ -29,13 +29,13 @@
             <div class="box-row"> 
                 <div class="box-cell box1"> 
                     <p class="from">FROM</p>
-                    <h1 class="place"><%= typeof from_location != 'undefined' ? from_location : 'New Delhi' %></h1>
-                    <p class="location"><%= typeof from_station_name != 'undefined' ? from_station_name : 'Station 1, New Delhi' %></p>
+                    <h1 class="place"><%= typeof from_location != 'undefined' ? from_location : 'New York City' %></h1>
+                    <p class="location"><%= typeof from_station_name != 'undefined' ? from_station_name : 'Station 1, New York City' %></p>
                 </div> 
                 <div class="box-cell box2"> 
                     <p class="from">TO</p>
-                    <h1 class="place"><%= typeof to_location != 'undefined' ? to_location : 'Gurgaon' %></h1>
-                    <p class="location"><%= typeof to_station_name != 'undefined' ? to_station_name : 'Station 5, Gurgaon' %></p>
+                    <h1 class="place"><%= typeof to_location != 'undefined' ? to_location : 'San Francisco' %></h1>
+                    <p class="location"><%= typeof to_station_name != 'undefined' ? to_station_name : 'Station 5, San Francisco' %></p>
                 </div> 
             </div> 
         </div> 
@@ -48,10 +48,10 @@
         <label class="radio-inline">
           <input type="radio" value="round-trip" name="optradio">  Round Trip
         </label>
-        <input name="from_location" type="hidden" value="<%= typeof from_location != 'undefined' ? from_location : 'New Delhi' %>">
-        <input name="to_location" type="hidden" value="<%= typeof to_location != 'undefined' ? to_location : 'Gurgaon' %>">
-        <input name="from_station_name" type="hidden" value="<%= typeof from_station_name != 'undefined' ? from_station_name : 'Station 1, New Delhi' %>">
-        <input name="to_station_name" type="hidden" value="<%= typeof to_station_name != 'undefined' ? to_station_name : 'Station 5, Gurgaon' %>">
+        <input name="from_location" type="hidden" value="<%= typeof from_location != 'undefined' ? from_location : 'New York City' %>">
+        <input name="to_location" type="hidden" value="<%= typeof to_location != 'undefined' ? to_location : 'San Francisco' %>">
+        <input name="from_station_name" type="hidden" value="<%= typeof from_station_name != 'undefined' ? from_station_name : 'Station 1, New York City' %>">
+        <input name="to_station_name" type="hidden" value="<%= typeof to_station_name != 'undefined' ? to_station_name : 'Station 5, San Francisco' %>">
         <a href=""><button type="submit" class="continue">Continue</button></a>
     </form>
     <table>
@@ -80,10 +80,12 @@
           <div class="modal-body">
             <form method="POST" action="/choose-from">
             <select name="From_Locations" id="dropdown-selector">
-              <option value="New Delhi">New Delhi</option>
-              <option value="Gurgaon">Gurgaon</option>
-              <option value="Mumbai">Mumbai</option>
-              <option value="Chennai">Chennai</option>
+              <option value="New York City">New York City</option>
+              <option value="San Francisco">San Francisco</option>
+              <option value="Boston">Boston</option>
+              <option value="Los Angeles">Los Angeles</option>
+              <option value="Austin">Austin</option>
+              <option value="Washington DC">Washington DC</option>
             </select>
             <br><br>
             <select name="From_Station" id="dropdown-selector">
@@ -101,10 +103,12 @@
             </div>
             <div class="modal-body">
               <select name="To_Locations" id="dropdown-selector">
-              <option value="New Delhi">New Delhi</option>
-              <option value="Gurgaon">Gurgaon</option>
-              <option value="Mumbai">Mumbai</option>
-              <option value="Chennai">Chennai</option>
+              <option value="New York City">New York City</option>
+              <option value="San Francisco">San Francisco</option>
+              <option value="Boston">Boston</option>
+              <option value="Los Angeles">Los Angeles</option>
+              <option value="Austin">Austin</option>
+              <option value="Washington DC">Washington DC</option>
               </select>
               <br><br>
               <select name="To_Station" id="dropdown-selector">
