@@ -139,11 +139,11 @@ body {
     }
     #city-input {
         width: 240px;
-        margin-right:0rem;
+        margin-left:64rem;
     }
     #state-input {
         width: 240px;
-        margin-left: 62.3rem;
+        margin-left: 30px;
         margin-top: -3.2rem!important;
     }
   }
