@@ -182,11 +182,6 @@ th, td {
   text-align: center;
 }
 
-.arrow-icon {
-  margin-left: 59rem;
-  margin-top: -22rem;
-}
-
 .choose-location {
   height: 35px;
   width: 160px;
@@ -295,10 +290,5 @@ th, td {
   #tickets-input {
     margin-top: 1rem;
     margin-left: 190px;
-  }
-  .arrow-icon {
-    margin-left: 46rem;
-    margin-top: -19rem;
-    z-index: 1;
   }
 }
